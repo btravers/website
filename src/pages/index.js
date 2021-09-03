@@ -7,6 +7,12 @@ const IndexPage = () => {
     <main>
       <title>Home Page</title>
       <Logo />
+      <Logo large />
+
+      <div style={{ backgroundColor: "#2B2D42 " }}>
+        <Logo inverted />
+        <Logo inverted large />
+      </div>
     </main>
   )
 }
