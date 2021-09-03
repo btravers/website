@@ -34,5 +34,14 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `roboto\:100,300`
+        ],
+        display: 'swap'
+      }
+    },
   ],
 };
