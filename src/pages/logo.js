@@ -2,13 +2,13 @@ import * as React from "react"
 
 import Logo from '../components/Logo'
 
-const IndexPage = () => {
+const LogoPage = () => {
   return (
     <main>
-      <title>Home Page</title>
-      <Logo large />
+      <title>Logo</title>
+      <Logo />
     </main>
   )
 }
 
-export default IndexPage
+export default LogoPage

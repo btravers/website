@@ -1,5 +1,5 @@
 import * as React from "react"
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 
  const container = {
     display: "flex",
@@ -9,6 +9,7 @@ import PropTypes from 'prop-types'
     fontWeight: 300,
     color: "#2B2D42",
     margin: "30px",
+    padding: "10px",
 }
 
 const containerInverted = {
