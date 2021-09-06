@@ -16,7 +16,7 @@ const skillSets = [
       {
         name: "Java",
         mark: 3, 
-        wanted: true,
+        wanted: false,
       },
       {
         name: "Kotlin",
@@ -26,16 +26,11 @@ const skillSets = [
       {
         name: "JavaScript",
         mark: 3, 
-        wanted: true,
+        wanted: false,
       },
       {
         name: "TypeScript",
         mark: 2, 
-        wanted: true,
-      },
-      {
-        name: "Spring boot",
-        mark: 3, 
         wanted: true,
       },
     ],
@@ -78,7 +73,7 @@ const skillSets = [
       {
         name: "Apache Kafka",
         mark: 3, 
-        wanted: false,
+        wanted: true,
       },
       {
         name: "RabbitMQ",
@@ -110,12 +105,12 @@ const skillSets = [
       {
         name: "Kubernetes",
         mark: 3, 
-        wanted: false,
+        wanted: true,
       },
       {
         name: "Git",
         mark: 3, 
-        wanted: false,
+        wanted: true,
       },
       {
         name: "Gitlab CI/CD",
@@ -142,7 +137,7 @@ const IndexPage = () => {
 
       <div className="max-w-screen-xl m-auto">
 
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 items-center">
           <div>
             <img src={logo} alt="logo" />
             <h2 className="text-4xl mt-2 mb-3">développeur full stack sénior <br /> basé à Rennes</h2>
