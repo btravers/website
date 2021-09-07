@@ -13,6 +13,7 @@ import educationIllustration from "../images/94.svg"
 import Experience from "../components/Experience"
 import LinkedIn from "../components/LinkedIn"
 import Education from "../components/Education"
+import Footer from "../components/Footer"
 
 const skillSets = [
   {
@@ -154,7 +155,7 @@ const IndexPage = () => {
         <div className="mt-32 grid grid-cols-2 items-center">
           <div>
             <img className="w-4/6" src={logo} alt="logo" />
-            <h2 className="text-4xl mt-2 mb-3">développeur full stack senior <br /> basé à Rennes, France</h2>
+            <h2 className="text-4xl text-primary-800 mt-2 mb-3">développeur full stack senior <br /> basé à Rennes, France</h2>
             <div className="inline-grid grid-cols-2 mt-6 mb-8 gap-5">
               <a href="https://www.linkedin.com/in/btraversfr/" target="_blank" rel="noopener noreferrer">
                 <LinkedIn />
@@ -197,11 +198,7 @@ const IndexPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center w-full">
-          <div>Handcrafted with ❤️ by me</div>
-          <div>Using <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer">Gatsby</a> + <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">tailwindcss</a></div>
-          <div>Source code on <a href="https://www.github.com/btravers/website/" target="_blank" rel="noopener noreferrer">GitHub</a></div>
-        </div>
+        <Footer />
 
       </div>
       

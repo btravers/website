@@ -7,9 +7,9 @@ import { dateFormatter } from "./date-utils"
 
 const Education = ({ school, title, location, period: { start, end } }) => (
     <div>
-        <div className="text-xl font-bold mb-1">{school}</div>
-        <div className="text-lg text-gray-800 mb-px">{title}</div>
-        <div className="inline-grid grid-cols-2 text-gray-600">
+        <div className="text-xl text-primary-800 font-bold mb-1">{school}</div>
+        <div className="text-lg text-primary-800 mb-px">{title}</div>
+        <div className="inline-grid grid-cols-2 text-neutral">
             <div className="inline-grid grid-cols-2">
                 <LocationIcon />
                 <span>{location}</span>

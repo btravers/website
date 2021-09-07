@@ -5,7 +5,7 @@ import SkillLevel from "./SkillLevel"
 
 const Skill = ({ name, mark }) => (
     <div className="grid grid-cols-2 pt-2 pb-2">
-        <div className="text-lg">{name}</div>
+        <div className="text-lg text-primary-800">{name}</div>
         <div className="grid grid-cols-3 gap-1 items-center justify-self-end">
             <SkillLevel level="Débutant" hilighted={mark>0} />
             <SkillLevel level="Intermédiaire" hilighted={mark>1} />

@@ -7,9 +7,9 @@ import { dateFormatter } from "./date-utils"
 
 const Experience = ({ title, company, location, period: { start, end }, description, skills }) => (
     <div>
-        <div className="text-xl font-bold mb-1">{company}</div>
-        <div className="text-lg text-gray-800 mb-px">{title}</div>
-        <div className="inline-grid grid-cols-2 text-gray-600">
+        <div className="text-xl text-primary-800 font-bold mb-1">{company}</div>
+        <div className="text-lg text-primary-800 mb-px">{title}</div>
+        <div className="inline-grid grid-cols-2 text-neutral">
             <div className="inline-grid grid-cols-2">
                 <LocationIcon />
                 <span>{location}</span>
@@ -21,7 +21,7 @@ const Experience = ({ title, company, location, period: { start, end }, descript
         </div>
         <div className="text-lg my-3">{description}</div>
         <div className="flex flex-wrap gap-3 my-3">
-            {skills.map(skill => <div className="bg-gray-200 text-gray-700 px-2 py-1 rounded">{skill}</div>)}
+            {skills.map(skill => <div className="bg-primary-200 text-primary-400 px-2 py-1 rounded">{skill}</div>)}
         </div>
     </div>
 )

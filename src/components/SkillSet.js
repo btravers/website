@@ -5,7 +5,7 @@ import Skill from "./Skill"
 
 const SKillSet = ({ name, skills }) => (
     <div>
-        <h4 className="text-lg mb-1 text-gray-500">{name}</h4>
+        <h4 className="text-lg mb-1 text-neutral">{name}</h4>
         <div className="divide-y divide-gray-200 divide-solid">
             {skills.map(skill => <Skill {...skill} />)}
         </div>
