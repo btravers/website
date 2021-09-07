@@ -1,23 +1,16 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 
-import LocationIcon from "./LocationIcon"
-import CalendarIcon from "./CalendarIcon"
-import { dateFormatter } from "./date-utils"
+import Location from "./Location"
+import Calendar from "./Calendar"
 
-const Education = ({ school, title, location, period: { start, end } }) => (
+const Education = ({ school, title, location, period }) => (
     <div>
-        <div className="text-xl text-primary-800 font-bold mb-1">{school}</div>
-        <div className="text-lg text-primary-800 mb-px">{title}</div>
-        <div className="inline-grid grid-cols-2 text-neutral">
-            <div className="inline-grid grid-cols-2">
-                <LocationIcon />
-                <span>{location}</span>
-            </div>
-            <div className="inline-grid grid-cols-2">
-                <CalendarIcon /> 
-                <span>{dateFormatter(start)} - {dateFormatter(end)}</span>
-            </div>
+        <div className="text-xl text-primary-800 font-bold my-1">{school}</div>
+        <div className="text-lg text-primary-800 my-1">{title}</div>
+        <div className="inline-flex gap-10 text-neutral">
+            <Location value={location} />
+            <Calendar {...period} />
         </div>
     </div>
 )

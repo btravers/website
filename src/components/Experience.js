@@ -1,27 +1,20 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 
-import LocationIcon from "./LocationIcon"
-import CalendarIcon from "./CalendarIcon"
-import { dateFormatter } from "./date-utils"
+import Location from "./Location"
+import Calendar from "./Calendar"
 
-const Experience = ({ title, company, location, period: { start, end }, description, skills }) => (
+const Experience = ({ title, company, location, period, description, skills }) => (
     <div>
-        <div className="text-xl text-primary-800 font-bold mb-1">{company}</div>
-        <div className="text-lg text-primary-800 mb-px">{title}</div>
-        <div className="inline-grid grid-cols-2 text-neutral">
-            <div className="inline-grid grid-cols-2">
-                <LocationIcon />
-                <span>{location}</span>
-            </div>
-            <div className="inline-grid grid-cols-2">
-                <CalendarIcon /> 
-                <span>{dateFormatter(start)} - {dateFormatter(end)}</span>
-            </div>
+        <div className="text-xl text-primary-800 font-bold my-1">{company}</div>
+        <div className="text-lg text-primary-800 my-1">{title}</div>
+        <div className="inline-flex gap-10 text-neutral">
+            <Location value={location} />
+            <Calendar {...period} />
         </div>
         <div className="text-lg my-3">{description}</div>
-        <div className="flex flex-wrap gap-3 my-3">
-            {skills.map(skill => <div className="bg-primary-200 text-primary-400 px-2 py-1 rounded">{skill}</div>)}
+        <div className="inline-flex flex-wrap gap-3 my-3">
+            {skills.map(skill => <div className="bg-primary-200 text-primary-800 px-2 py-1 rounded">{skill}</div>)}
         </div>
     </div>
 )
