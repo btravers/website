@@ -1,16 +1,12 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 
-import Star from "./Star"
 import SkillLevel from "./SkillLevel"
 
-const Skill = ({ name, mark, wanted }) => (
-    <div className="grid grid-cols-3 pt-2 pb-2">
+const Skill = ({ name, mark }) => (
+    <div className="grid grid-cols-2 pt-2 pb-2">
         <div className="text-lg">{name}</div>
-        <div className="justify-seff-end">
-            {wanted && <Star />}
-        </div>
-        <div className="grid grid-cols-3 gap-px">
+        <div className="grid grid-cols-3 gap-1 items-center justify-self-end">
             <SkillLevel level="Débutant" hilighted={mark>0} />
             <SkillLevel level="Intermédiaire" hilighted={mark>1} />
             <SkillLevel level="Confirmé" hilighted={mark>2} />
@@ -21,7 +17,6 @@ const Skill = ({ name, mark, wanted }) => (
 Skill.propTypes = {
     name: PropTypes.string.isRequired,
     mark: PropTypes.oneOf([1, 2, 3]).isRequired,
-    wanted: PropTypes.bool.isRequired,
 }
 
 export default Skill
