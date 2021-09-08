@@ -1,8 +1,14 @@
 import * as React from "react"
 import PropTypes from "prop-types"
+import markdownit from "markdown-it"
 
 import Location from "./Location"
 import Calendar from "./Calendar"
+
+const md = markdownit({
+    breaks: true,
+    html: true,
+})
 
 const Experience = ({ title, company, location, period, description, skills }) => (
     <div>
@@ -12,7 +18,7 @@ const Experience = ({ title, company, location, period, description, skills }) =
             <Location value={location} />
             <Calendar {...period} />
         </div>
-        <div className="text-lg my-3">{description}</div>
+        <div className="markdown" dangerouslySetInnerHTML={{__html: md.render(description)}}></div>
         <div className="inline-flex flex-wrap gap-3 my-3">
             {skills.map((skill, index) => <div key={index} className="bg-primary-200 text-primary-800 px-2 py-1 rounded">{skill}</div>)}
         </div>

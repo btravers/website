@@ -28,3 +28,19 @@
 .parallax__layer--deep {
     transform: translateZ(-3px) scale(4);
 }
+
+.markdown ul {
+    @apply list-disc list-inside pl-8;
+}
+
+.markdown li {
+    @apply my-2;
+}
+
+.markdown p {
+    @apply my-2;
+}
+
+.markdown h3 {
+    @apply text-lg mt-3 mb-2;
+}
