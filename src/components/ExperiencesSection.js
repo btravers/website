@@ -22,7 +22,7 @@ const experiences = [
 const ExperiencesSection = () => (
     <Section title={{ value: "expériences", illustration }}>
         <div>
-            {experiences.map(experience => <Experience {...experience} />)}
+            {experiences.map((experience, index) => <Experience key={index} {...experience} />)}
         </div>
     </Section>
 )

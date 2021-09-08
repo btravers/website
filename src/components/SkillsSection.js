@@ -108,7 +108,7 @@ const skillSets = [
 const SkillsSection = () => (
     <Section title={{ value: "compétences", illustration }}>
         <div className="grid grid-cols-2 gap-x-20 gap-y-10">
-            {skillSets.map(skillSet => <SkillSet {...skillSet} />)}
+            {skillSets.map((skillSet, index) => <SkillSet key={index} {...skillSet} />)}
         </div>
     </Section>
 )

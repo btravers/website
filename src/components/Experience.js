@@ -14,7 +14,7 @@ const Experience = ({ title, company, location, period, description, skills }) =
         </div>
         <div className="text-lg my-3">{description}</div>
         <div className="inline-flex flex-wrap gap-3 my-3">
-            {skills.map(skill => <div className="bg-primary-200 text-primary-800 px-2 py-1 rounded">{skill}</div>)}
+            {skills.map((skill, index) => <div key={index} className="bg-primary-200 text-primary-800 px-2 py-1 rounded">{skill}</div>)}
         </div>
     </div>
 )

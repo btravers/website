@@ -20,7 +20,7 @@ const education = [
 const EducationSection = () => (
     <Section title={{ value: "études", illustration }}>
         <div>
-            {education.map(e => <Education {...e} />)}
+            {education.map((e, index) => <Education key={index} {...e} />)}
         </div>
     </Section>
 )

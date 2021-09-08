@@ -3,7 +3,7 @@ import * as React from "react"
 import SectionTitle from "./SectionTitle"
 
 const Section = ({ title, children }) => (
-    <div className="my-10">
+    <div className="z-10 my-10">
         <SectionTitle {...title} />
         {children}
     </div>

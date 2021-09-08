@@ -7,19 +7,19 @@ import SkillsSection from "../components/SkillsSection"
 import ExperiencesSection from "../components/ExperiencesSection"
 import EducationSection from "../components/EducationSection"
 import Footer from "../components/Footer"
-
+import ParallaxBackground from "../components/ParallaxBackground"
 
 const IndexPage = () => {
   return (
-    <main>
+    <main className="parallax bg-gray-50">
       <title>Benoit TRAVERS</title>
 
-      <div className="h-screen">
+      <div className="z-10 h-screen">
           <Header />
           <Hero />
       </div>
 
-      <div className="max-w-screen-lg m-auto flex flex-col gap-48">
+      <div className="z-10 max-w-screen-lg m-auto flex flex-col gap-48">
 
         <Intro />
 
@@ -30,6 +30,8 @@ const IndexPage = () => {
         <Footer />
 
       </div>
+
+      <ParallaxBackground />
       
     </main>
   )
