@@ -15,25 +15,47 @@ const symbols = [
 ]
 
 const sizes = [
-    "6xl", 
-    "7xl", 
-    "8xl", 
-    "9xl", 
+    "3.75rem", 
+    "4.5rem", 
+    "6rem", 
+    "8rem", 
 ]
 
 const colors = [
-    "green", 
-    "indigo",
-    "blue",
-    "yellow",
-    "purple",
-    "red",
-]
+    // red
+    "#FEF2F2",
+    "#FEE2E2",
+    "#FECACA",
 
-const colorVariants = [
-    50,
-    100,
-    200,
+    // yellow
+    "#FFFBEB",
+    "#FEF3C7",
+    "#FDE68A",
+
+    // green
+    "#ECFDF5",
+    "#D1FAE5",
+    "#A7F3D0",
+
+    // blue
+    "#EFF6FF",
+    "#DBEAFE",
+    "#BFDBFE",
+
+    // indigo
+    "#EEF2FF",
+    "#E0E7FF",
+    "#C7D2FE",
+
+    // purple
+    "#F5F3FF",
+    "#EDE9FE",
+    "#DDD6FE",
+
+    // pink
+    "#FDF2F8",
+    "#FCE7F3",
+    "#FBCFE8",
 ]
 
 function random(min, max) {
@@ -44,20 +66,14 @@ function getRandomValueFrom(items) {
     return items[Math.floor(Math.random() * items.length)]
 }
 
-function generateSize() {
-    return `text-${getRandomValueFrom(sizes)}`
-}
-
-function generateColor() {
-    return `text-${getRandomValueFrom(colors)}-${getRandomValueFrom(colorVariants)}`
-}
-
 const RandomSymbol = () => (
     <div 
-        className={`absolute ${generateColor()} ${generateSize()}`} 
+        className="absolute" 
         style={{ 
             top: `${random(10, 250)}%`,
             left: `${random(10, 90)}%`,
+            fontSize: getRandomValueFrom(sizes),
+            color: getRandomValueFrom(colors),
         }}
     >
         {getRandomValueFrom(symbols)}
