@@ -56,7 +56,7 @@ const RandomSymbol = () => (
     <div 
         className={`absolute ${generateColor()} ${generateSize()}`} 
         style={{ 
-            top: `${random(10, 200)}%`,
+            top: `${random(10, 250)}%`,
             left: `${random(10, 90)}%`,
         }}
     >

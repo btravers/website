@@ -7,14 +7,49 @@ import illustration from "../images/90.svg"
 
 const experiences = [
     {
-      title: "Lead développeur backend",
-      company: "Ouest-France",
-      location: "Rennes, France",
-      period: {
-        start: new Date(2018, 0),
-        end: new Date(2019, 8),
-      },
-      description: 
+        title: "Consultant / Formateur développement logiciel",
+        company: "Zenika",
+        location: "Rennes, France",
+        period: {
+          start: new Date(2015, 0),
+          end: new Date(2021, 7),
+        },
+        description: 
+`
+Formateur Java, Javascript, React.js, Git.
+`,
+        skills: ["Kotlin", "Java", "Spring Boot", "JavaScript", "React.js", "Elasticsearch", "PostgreSQL", "RabbitMQ", "Kafka", "Kubernetes", "Docker"],
+    },
+
+    {
+        title: "Développeur backend",
+        company: "Enky by Leroy Merlin",
+        location: "Lille, France",
+        period: {
+          start: new Date(2021, 1),
+          end: new Date(2021, 7),
+        },
+        description: 
+`
+Enki est la solution de domotique développée par Leroy Merlin.
+
+### Mission et tâches principales :
+
+* Développement des briques pour le pilotage des ampoules connectées avec Amazon Alexa
+* Maintenance et évolution du backend Enki
+`,
+        skills: ["Java", "Spring Boot", "Vert.x", "JavaScript", "MongoDB", "RabbitMQ", "Amazon Alexa", "Docker"],
+    },
+
+    {
+        title: "Lead développeur backend",
+        company: "Ouest-France",
+        location: "Rennes, France",
+        period: {
+          start: new Date(2018, 0),
+          end: new Date(2019, 8),
+        },
+        description: 
 `
 Ouest-France développe une plateforme pour l'hébergement des sites web du groupe SIPA dont le site principal est celui de Ouest-France. 
 
@@ -34,18 +69,18 @@ Cette nouvelle plateforme est consituée principalement de trois briques :
   * Monitoring des applicatifs en environnement de qualification et de production (Spring Boot Actuator, Micrometer, Spring Boot Admin, Prometheus, Grafana, EFK),
   * Optimisation des temps de réponse et des consommations CPU / mémoire des applicatifs.
 `,
-      skills: ["Kotlin", "Java", "Spring Boot", "Spring Webflux", "Elasticsearch", "RabbitMQ", "PostgreSQL", "Kubernetes", "Docker", "Prometheus", "Grafana", "Kafka"],
+        skills: ["Kotlin", "Java", "Spring Boot", "Spring Webflux", "Elasticsearch", "RabbitMQ", "PostgreSQL", "Kubernetes", "Docker", "Prometheus", "Grafana", "Kafka"],
     },
 
     {
-      title: "Développeur full stack",
-      company: "Cinquième de Couv", 
-      location: "Rennes, France",
-      period: {
-        start: new Date(2016, 3),
-        end: new Date(2017, 0),
-      },
-      description: 
+        title: "Développeur full stack",
+        company: "Cinquième de Couv", 
+        location: "Rennes, France",
+        period: {
+          start: new Date(2016, 3),
+          end: new Date(2017, 0),
+        },
+        description: 
 `
 Cinquième de Couv est une application de conception et d'édition de documents publicitaires (magazines, dépliants, ...) destinée au grand public.
 
@@ -62,7 +97,7 @@ L'application est décomposée en 3 modules techniques :
 * Développement d'une API REST en Java / Spring Boot utilisant une base de données MongoDB,
 * Développement de micro services techniques en Node.js.
 `,
-      skills: ["Java", "Spring Boot", "Apache Camel", "JWT", "MongoDB", "JavaScript", "Node.js", "React.js", "Redux", "Docker"],
+        skills: ["Java", "Spring Boot", "Apache Camel", "JWT", "MongoDB", "JavaScript", "Node.js", "React.js", "Redux", "Docker"],
     },
 ]
 
