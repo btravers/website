@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import Section from "./Section"
+import EntitledSection from "./EntitledSection"
 import Education from "./Education"
 
 import illustration from "../images/94.svg"
@@ -18,11 +18,11 @@ const education = [
 ]
 
 const EducationSection = () => (
-    <Section title={{ value: "études", illustration }}>
+    <EntitledSection title={{ value: "études", illustration }}>
         <div>
             {education.map((e, index) => <Education key={index} {...e} />)}
         </div>
-    </Section>
+    </EntitledSection>
 )
 
 export default EducationSection

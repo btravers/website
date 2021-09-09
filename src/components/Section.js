@@ -1,10 +1,7 @@
 import * as React from "react"
 
-import SectionTitle from "./SectionTitle"
-
-const Section = ({ title, children }) => (
-    <div className="z-10 my-10 backdrop-filter backdrop-blur-sm">
-        <SectionTitle {...title} />
+const Section = ({ children }) => (
+    <div className="z-10 my-10 p-5 backdrop-filter backdrop-blur-sm">
         {children}
     </div>
 )

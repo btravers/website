@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import Section from "./Section"
+import EntitledSection from "./EntitledSection"
 import Experience from "./Experience"
 
 import illustration from "../images/90.svg"
@@ -102,11 +102,11 @@ L'application est décomposée en 3 modules techniques :
 ]
 
 const ExperiencesSection = () => (
-    <Section title={{ value: "expériences", illustration }}>
+    <EntitledSection title={{ value: "expériences", illustration }}>
         <div className="flex flex-col gap-12">
             {experiences.map((experience, index) => <Experience key={index} {...experience} />)}
         </div>
-    </Section>
+    </EntitledSection>
 )
 
 export default ExperiencesSection

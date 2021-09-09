@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import Section from "./Section"
+import EntitledSection from "./EntitledSection"
 import SkillSet from "./SkillSet"
 
 import illustration from "../images/421.svg"
@@ -106,11 +106,11 @@ const skillSets = [
 ]
 
 const SkillsSection = () => (
-    <Section title={{ value: "compétences", illustration }}>
-        <div className="grid grid-cols-2 gap-x-20 gap-y-10">
+    <EntitledSection title={{ value: "compétences", illustration }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10">
             {skillSets.map((skillSet, index) => <SkillSet key={index} {...skillSet} />)}
         </div>
-    </Section>
+    </EntitledSection>
 )
 
 export default SkillsSection
