@@ -37,10 +37,32 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `roboto\:100,300`
+          `roboto:100,300`
         ],
         display: 'swap'
       }
+    },
+    {
+      resolve: "gatsby-plugin-prettier-eslint",
+      options: {
+        prettier: {
+          patterns: [
+            "**/*.{css,scss,less}",
+            "**/*.{json,json5}",
+            "**/*.{graphql}",
+            "**/*.{md,mdx}",
+            "**/*.{html}",
+            "**/*.{yaml,yml}",
+          ],
+        },
+        eslint: {
+          patterns: "**/*.{js,jsx,ts,tsx}",
+          customOptions: {
+            fix: true,
+            cache: true,
+          },
+        },
+      },
     },
   ],
 };
