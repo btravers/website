@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.btravers.fr",
-    title: "Benoit TRAVERS",
+    title: "Benoit Travers",
+    description: "Benoit Travers - Freelance software developper",
+    siteUrl: "https://www.benoit-travers.fr",
+    twitterUsername: "@Benoit_Travers",
   },
   plugins: [
     "gatsby-plugin-postcss",

@@ -1,5 +1,6 @@
 import * as React from "react"
 
+import SEO from "../components/seo"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
 import Intro from "../components/Intro"
@@ -11,7 +12,7 @@ import ParallaxBackground from "../components/ParallaxBackground"
 
 const IndexPage = () => (
     <main className="parallax bg-gray-50">
-      <title>Benoit TRAVERS</title>
+      <SEO />
 
       <div className="z-10 h-screen">
           <Header />
