@@ -9,8 +9,7 @@ import EducationSection from "../components/EducationSection"
 import Footer from "../components/Footer"
 import ParallaxBackground from "../components/ParallaxBackground"
 
-const IndexPage = () => {
-  return (
+const IndexPage = () => (
     <main className="parallax bg-gray-50">
       <title>Benoit TRAVERS</title>
 
@@ -35,6 +34,5 @@ const IndexPage = () => {
       
     </main>
   )
-}
 
 export default IndexPage

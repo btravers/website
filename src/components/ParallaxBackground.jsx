@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import ParallaxLayer from "../components/ParallaxLayer"
+import ParallaxLayer from "./ParallaxLayer"
 
 const symbols = [
     ">", 
