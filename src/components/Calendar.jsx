@@ -1,4 +1,5 @@
 import * as React from "react"
+import PropTypes from "prop-types"
 
 import CalendarIcon from "./CalendarIcon"
 
@@ -12,5 +13,10 @@ const Calendar = ({ start, end }) => (
         <span>{dateFormatter(start)} - {dateFormatter(end)}</span>
     </div>
 )
+
+Calendar.propTypes = {
+    start: PropTypes.instanceOf(Date).isRequired,
+    end: PropTypes.instanceOf(Date).isRequired,
+}
 
 export default Calendar

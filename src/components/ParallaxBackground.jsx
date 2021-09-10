@@ -1,4 +1,5 @@
 import * as React from "react"
+import PropTypes from "prop-types"
 
 import ParallaxLayer from "./ParallaxLayer"
 
@@ -66,30 +67,51 @@ function getRandomValueFrom(items) {
     return items[Math.floor(Math.random() * items.length)]
 }
 
-const RandomSymbol = () => (
+function repeat(n, fn) {
+    return [...Array(n).keys()].map(fn)
+}
+
+const Symbol = ({ style, children }) => (
     <div 
         className="absolute" 
-        style={{ 
-            top: `${random(10, 250)}%`,
-            left: `${random(10, 90)}%`,
-            fontSize: getRandomValueFrom(sizes),
-            color: getRandomValueFrom(colors),
-        }}
+        style={style}
     >
-        {getRandomValueFrom(symbols)}
+        {children}
     </div>
 )
 
-function repeat(n, fn) {
-    return [...Array(n).keys()].map(fn)
+Symbol.propTypes = {
+    style: PropTypes.shape({
+        top: PropTypes.string.isRequired,
+        left: PropTypes.string.isRequired,
+        fontSize: PropTypes.string.isRequired,
+        color: PropTypes.string.isRequired,
+    }).isRequired,
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+    ]).isRequired,
 }
 
 const ParallaxBackground = () => (
     <div className="z-0">
         {repeat(3, level => (
             <ParallaxLayer key={level} level={level}>
-                {repeat(10, i => <RandomSymbol key={i} />)}
-            </ParallaxLayer> 
+                {repeat(10, i => (
+                    <Symbol 
+                        key={i} 
+                        style={{
+                            top: `${random(10, 250)}%`,
+                            left: `${random(10, 90)}%`,
+                            fontSize: getRandomValueFrom(sizes),
+                            color: getRandomValueFrom(colors),
+                        }}
+                    >
+                        {getRandomValueFrom(symbols)}
+                    </Symbol>
+                )
+                )}
+            </ParallaxLayer>
         ))}
     </div>
 )

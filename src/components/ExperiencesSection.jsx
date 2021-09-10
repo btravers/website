@@ -1,4 +1,5 @@
 import * as React from "react"
+import { v4 as uuidv4 } from "uuid"
 
 import EntitledSection from "./EntitledSection"
 import Experience from "./Experience"
@@ -6,30 +7,32 @@ import Experience from "./Experience"
 import illustration from "../images/90.svg"
 
 const experiences = [
-    {
-        title: "Consultant / Formateur développement logiciel",
-        company: "Zenika",
-        location: "Rennes, France",
-        period: {
-          start: new Date(2015, 0),
-          end: new Date(2021, 7),
-        },
-        description: 
+  {
+    id: uuidv4(),
+    title: "Consultant / Formateur développement logiciel",
+    company: "Zenika",
+    location: "Rennes, France",
+    period: {
+      start: new Date(2015, 0),
+      end: new Date(2021, 7),
+    },
+    description: 
 `
 Formateur Java, Javascript, React.js, Git.
 `,
-        skills: ["Kotlin", "Java", "Spring Boot", "JavaScript", "React.js", "Elasticsearch", "PostgreSQL", "RabbitMQ", "Kafka", "Kubernetes", "Docker"],
-    },
+    skills: ["Kotlin", "Java", "Spring Boot", "JavaScript", "React.js", "Elasticsearch", "PostgreSQL", "RabbitMQ", "Kafka", "Kubernetes", "Docker"],
+  },
 
-    {
-        title: "Développeur backend",
-        company: "Enky by Leroy Merlin",
-        location: "Lille, France",
-        period: {
-          start: new Date(2021, 1),
-          end: new Date(2021, 7),
-        },
-        description: 
+  {
+    id: uuidv4(),
+      title: "Développeur backend",
+      company: "Enky by Leroy Merlin",
+      location: "Lille, France",
+      period: {
+        start: new Date(2021, 1),
+        end: new Date(2021, 7),
+      },
+      description: 
 `
 Enki est la solution de domotique développée par Leroy Merlin.
 
@@ -38,18 +41,19 @@ Enki est la solution de domotique développée par Leroy Merlin.
 * Développement des briques pour le pilotage des ampoules connectées avec Amazon Alexa
 * Maintenance et évolution du backend Enki
 `,
-        skills: ["Java", "Spring Boot", "Vert.x", "JavaScript", "MongoDB", "RabbitMQ", "Amazon Alexa", "Docker"],
-    },
+      skills: ["Java", "Spring Boot", "Vert.x", "JavaScript", "MongoDB", "RabbitMQ", "Amazon Alexa", "Docker"],
+  },
 
-    {
-      title: "Lead développeur backend",
-      company: "MGDIS",
-      location: "Vannes, France",
-      period: {
-        start: new Date(2020, 11),
-        end: new Date(2021, 0),
-      },
-      description: 
+  {
+    id: uuidv4(),
+    title: "Lead développeur backend",
+    company: "MGDIS",
+    location: "Vannes, France",
+    period: {
+      start: new Date(2020, 11),
+      end: new Date(2021, 0),
+    },
+    description: 
 `
 MGDIS développe une plateforme permettant la mise en relation des parties à la recherche de subventions pour le financement d'un projet et les financeurs potentiellement concernés. 
 
@@ -59,18 +63,19 @@ MGDIS développe une plateforme permettant la mise en relation des parties à la
 * Mise en place de l'intégration continue ainsi que du déploiement continu
 * Encadrement d'un profil junior
 `,
-      skills: ["Java", "Spring Boot", "Apache Camel", "Kafka", "MongoDB", "Kubernetes", "Gitlab CI/CD", "Gherkin"],
-    },
+    skills: ["Java", "Spring Boot", "Apache Camel", "Kafka", "MongoDB", "Kubernetes", "Gitlab CI/CD", "Gherkin"],
+  },
 
-    {
-      title: "Développeur backend",
-      company: "Lacroix city",
-      location: "Nantes, France",
-      period: {
-        start: new Date(2020, 9),
-        end: new Date(2020, 11),
-      },
-      description: 
+  {
+    id: uuidv4(),
+    title: "Développeur backend",
+    company: "Lacroix city",
+    location: "Nantes, France",
+    period: {
+      start: new Date(2020, 9),
+      end: new Date(2020, 11),
+    },
+    description: 
 `
 Refonte d'une application de traitement de données « Smart City ».
 
@@ -79,18 +84,19 @@ Refonte d'une application de traitement de données « Smart City ».
 * Élaboration d'une architecture de traitement d'évènements en temps réel provenant de capteurs bluetooth
 * Rétro-engineering et refonte de batchs d'intégration de ces évènements pour produire des métriques complexes (temps de parcours, débit de véhicules, détection de congestion)
 `,
-      skills: ["Java", "Spring Boot", "Apache Camel", "Kafka", "Elasticsearch", "MySQL", "Kubernetes", "Gitlab CI/CD"],
-    },
+    skills: ["Java", "Spring Boot", "Apache Camel", "Kafka", "Elasticsearch", "MySQL", "Kubernetes", "Gitlab CI/CD"],
+  },
 
-    {
-      title: "Développeur backend",
-      company: "ARIADNEXT",
-      location: "Rennes, France",
-      period: {
-        start: new Date(2020, 2),
-        end: new Date(2020, 9),
-      },
-      description: 
+  {
+    id: uuidv4(),
+    title: "Développeur backend",
+    company: "ARIADNEXT",
+    location: "Rennes, France",
+    period: {
+      start: new Date(2020, 2),
+      end: new Date(2020, 9),
+    },
+    description: 
 `
 IDECYS est un service de délégations, permettant aux organisations de donner des droits à des personnes tierces de la représenter pour réaliser des actions en son nom.
 
@@ -99,18 +105,19 @@ IDECYS est un service de délégations, permettant aux organisations de donner d
 * Développement et configuration d'un workflow d'enregistrement et d'authentification s'appuyant sur Keycloak
 * Développpement d'une application d'administration de compte basé sur Keycloak
 `,
-      skills: ["Java", "Keycloak", "OAuth 2.0", "OpenID Connect", "Spring Boot", "React", "TypeScript", "React.js", "Cypress"],
-    },
+    skills: ["Java", "Keycloak", "OAuth 2.0", "OpenID Connect", "Spring Boot", "React", "TypeScript", "React.js", "Cypress"],
+  },
 
-    {
-        title: "Lead développeur backend",
-        company: "Ouest-France",
-        location: "Rennes, France",
-        period: {
-          start: new Date(2018, 0),
-          end: new Date(2019, 8),
-        },
-        description: 
+  {
+    id: uuidv4(),
+    title: "Lead développeur backend",
+    company: "Ouest-France",
+    location: "Rennes, France",
+    period: {
+      start: new Date(2018, 0),
+      end: new Date(2019, 8),
+    },
+    description: 
 `
 Ouest-France développe une plateforme pour l'hébergement des sites web du groupe SIPA dont le site principal est celui de Ouest-France. 
 
@@ -130,18 +137,19 @@ Cette nouvelle plateforme est consituée principalement de trois briques :
   * Monitoring des applicatifs en environnement de qualification et de production (Spring Boot Actuator, Micrometer, Spring Boot Admin, Prometheus, Grafana, EFK)
   * Optimisation des temps de réponse et des consommations CPU / mémoire des applicatifs
 `,
-        skills: ["Kotlin", "Java", "Spring Boot", "Spring Webflux", "Elasticsearch", "RabbitMQ", "PostgreSQL", "Kubernetes", "Docker", "Prometheus", "Grafana", "Kafka"],
-    },
+    skills: ["Kotlin", "Java", "Spring Boot", "Spring Webflux", "Elasticsearch", "RabbitMQ", "PostgreSQL", "Kubernetes", "Docker", "Prometheus", "Grafana", "Kafka"],
+  },
 
-    {
-      title: "Développeur big data",
-      company: "Pages Jaunes", 
-      location: "Rennes, France",
-      period: {
-        start: new Date(2017, 0),
-        end: new Date(2017, 6),
-      },
-      description: 
+  {
+    id: uuidv4(),
+    title: "Développeur big data",
+    company: "Pages Jaunes", 
+    location: "Rennes, France",
+    period: {
+      start: new Date(2017, 0),
+      end: new Date(2017, 6),
+    },
+    description: 
 `
 L'équipe audience est en charge de la collecte de la données relative à l'audience des sites web et des applications mobiles de Pages Jaunes.
 
@@ -152,18 +160,19 @@ L'équipe audience est en charge de la collecte de la données relative à l'aud
 * Développement et industrialisation d'outils d'aide à la supervision de la collecte de la donnée
 * Suivi et maintenance des applications de l'équipe audience
 `,
-      skills: ["Spark", "Scala", "Elasticsearch", "Hadoop", "Kafka", "Java", "JavaScript", "React.js", "Redux"],
+    skills: ["Spark", "Scala", "Elasticsearch", "Hadoop", "Kafka", "Java", "JavaScript", "React.js", "Redux"],
   },
 
-    {
-        title: "Développeur full stack",
-        company: "Cinquième de Couv", 
-        location: "Rennes, France",
-        period: {
-          start: new Date(2016, 3),
-          end: new Date(2017, 0),
-        },
-        description: 
+  {
+    id: uuidv4(),
+    title: "Développeur full stack",
+    company: "Cinquième de Couv", 
+    location: "Rennes, France",
+    period: {
+      start: new Date(2016, 3),
+      end: new Date(2017, 0),
+    },
+    description: 
 `
 Cinquième de Couv est une application de conception et d'édition de documents publicitaires (magazines, dépliants, ...) destinée au grand public.
 
@@ -180,14 +189,24 @@ L'application est décomposée en 3 modules techniques :
 * Développement d'une API REST en Java / Spring Boot utilisant une base de données MongoDB
 * Développement de micro services techniques en Node.js
 `,
-        skills: ["Java", "Spring Boot", "Apache Camel", "JWT", "MongoDB", "JavaScript", "Node.js", "React.js", "Redux", "Docker"],
-    },
+    skills: ["Java", "Spring Boot", "Apache Camel", "JWT", "MongoDB", "JavaScript", "Node.js", "React.js", "Redux", "Docker"],
+  },
 ]
 
 const ExperiencesSection = () => (
     <EntitledSection title={{ value: "expériences", illustration }}>
         <div className="flex flex-col gap-12">
-            {experiences.map((experience, index) => <Experience key={index} {...experience} />)}
+            {experiences.map(({ id, title, company, location, period, description, skills }) => (
+              <Experience 
+                key={id}  
+                title={title}
+                company={company}
+                location={location}
+                period={period}
+                description={description}
+                skills={skills}
+              />
+            ))}
         </div>
     </EntitledSection>
 )

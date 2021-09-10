@@ -10,6 +10,7 @@ const SectionTitle = ({ value, illustration }) => (
 
 SectionTitle.propTypes = {
     value: PropTypes.string.isRequired,
+    illustration: PropTypes.string.isRequired,
 }
 
 export default SectionTitle

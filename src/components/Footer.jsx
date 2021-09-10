@@ -1,8 +1,17 @@
 import * as React from "react"
+import PropTypes from "prop-types"
 
 const FooterRef = ({ href, children }) => (
     <a className="underline" href={href} target="_blank" rel="noopener noreferrer">{children}</a>
 )
+
+FooterRef.propTypes = {
+    href: PropTypes.string.isRequired,
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+    ]).isRequired,
+}
 
 const Footer = () => (
     <footer className="z-10 flex flex-col items-center gap-1 mt-10 py-5 w-full text-primary-800">

@@ -4,13 +4,13 @@ import PropTypes from "prop-types"
 import Location from "./Location"
 import Calendar from "./Calendar"
 
-const Education = ({ school, title, location, period }) => (
+const Education = ({ school, title, location, period: { start, end} }) => (
     <div>
         <div className="text-xl text-primary-800 font-bold my-1">{school}</div>
         <div className="text-lg text-primary-800 my-1">{title}</div>
         <div className="inline-flex gap-10 text-neutral">
             <Location value={location} />
-            <Calendar {...period} />
+            <Calendar start={start} end={end} />
         </div>
     </div>
 )
