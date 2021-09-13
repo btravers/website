@@ -71,6 +71,20 @@ function repeat(n, fn) {
     return [...Array(n).keys()].map(fn)
 }
 
+const parallaxInformations = repeat(3, level => ({ 
+    level, 
+    symbols: repeat(15, id => ({ 
+        id, 
+        style: { 
+            top: `${random(10, 250)}%`,
+            left: `${random(10, 90)}%`,
+            fontSize: getRandomValueFrom(sizes),
+            color: getRandomValueFrom(colors),
+        },
+        symbol: getRandomValueFrom(symbols),
+    })),
+}))
+
 const Symbol = ({ style, children }) => (
     <div 
         className="absolute" 
@@ -95,22 +109,13 @@ Symbol.propTypes = {
 
 const ParallaxBackground = () => (
     <div className="z-0">
-        {repeat(3, level => (
+        {parallaxInformations.map(({ level, symbols: symbolInformation }) => (
             <ParallaxLayer key={level} level={level}>
-                {repeat(10, i => (
-                    <Symbol 
-                        key={i} 
-                        style={{
-                            top: `${random(10, 250)}%`,
-                            left: `${random(10, 90)}%`,
-                            fontSize: getRandomValueFrom(sizes),
-                            color: getRandomValueFrom(colors),
-                        }}
-                    >
-                        {getRandomValueFrom(symbols)}
+                {symbolInformation.map(({id, style, symbol}) => (
+                    <Symbol key={id} style={style}>
+                        {symbol}
                     </Symbol>
-                )
-                )}
+                ))}
             </ParallaxLayer>
         ))}
     </div>
