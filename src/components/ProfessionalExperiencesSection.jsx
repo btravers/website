@@ -2,7 +2,7 @@ import * as React from "react"
 import { v4 as uuidv4 } from "uuid"
 
 import EntitledSection from "./EntitledSection"
-import Experience from "./Experience"
+import ProfessionalExperience from "./ProfessionalExperience"
 
 import illustration from "../images/90.svg"
 
@@ -193,11 +193,11 @@ L'application est décomposée en 3 modules techniques :
   },
 ]
 
-const ExperiencesSection = () => (
+const ProfessionalExperiencesSection = () => (
     <EntitledSection title={{ value: "expériences", illustration }}>
         <div className="flex flex-col gap-12">
             {experiences.map(({ id, title, company, location, period, description, skills }) => (
-              <Experience 
+              <ProfessionalExperience 
                 key={id}  
                 title={title}
                 company={company}
@@ -211,4 +211,4 @@ const ExperiencesSection = () => (
     </EntitledSection>
 )
 
-export default ExperiencesSection
+export default ProfessionalExperiencesSection

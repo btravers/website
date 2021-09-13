@@ -25,6 +25,10 @@ const skillSets = [
           name: "TypeScript",
           mark: 2, 
         },
+        {
+          name: "Rust",
+          mark: 1,
+        },
       ],
     },
   

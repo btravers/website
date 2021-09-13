@@ -5,8 +5,8 @@ import Header from "../components/Header"
 import Hero from "../components/Hero"
 import Intro from "../components/Intro"
 import SkillsSection from "../components/SkillsSection"
-import ExperiencesSection from "../components/ExperiencesSection"
-import EducationSection from "../components/EducationSection"
+import ProfessionalExperiencesSection from "../components/ProfessionalExperiencesSection"
+import SchoolExperiencesSection from "../components/SchoolExperiencesSection"
 import Footer from "../components/Footer"
 import ParallaxBackground from "../components/ParallaxBackground"
 
@@ -19,17 +19,17 @@ const IndexPage = () => (
           <Hero />
       </div>
 
-      <div className="z-10 max-w-screen-lg m-auto flex flex-col gap-48">
+      <div className="z-10 max-w-screen-lg m-auto flex flex-col">
 
         <Intro />
 
         <SkillsSection />
-        <ExperiencesSection />
-        <EducationSection />
-
-        <Footer />
+        <ProfessionalExperiencesSection />
+        <SchoolExperiencesSection />
 
       </div>
+
+      <Footer />
 
       <ParallaxBackground />
       

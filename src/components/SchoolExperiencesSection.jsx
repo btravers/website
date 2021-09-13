@@ -2,11 +2,11 @@ import * as React from "react"
 import { v4 as uuidv4 } from "uuid"
 
 import EntitledSection from "./EntitledSection"
-import Education from "./Education"
+import SchoolExperience from "./SchoolExperience"
 
 import illustration from "../images/94.svg"
 
-const education = [
+const experiences = [
     {
       id: uuidv4(),
       school: "Institut National des Sciences Appliquées",
@@ -19,11 +19,11 @@ const education = [
     }
 ]
 
-const EducationSection = () => (
+const SchoolExperiencesSection = () => (
     <EntitledSection title={{ value: "études", illustration }}>
         <div>
-            {education.map(({id, school, title, location, period}) => (
-              <Education 
+            {experiences.map(({id, school, title, location, period}) => (
+              <SchoolExperience 
                 key={id} 
                 school={school}
                 title={title}
@@ -34,4 +34,4 @@ const EducationSection = () => (
     </EntitledSection>
 )
 
-export default EducationSection
+export default SchoolExperiencesSection
