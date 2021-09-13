@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Benoit Travers",
-    description: "Benoit Travers - Freelance software developper",
+    description: "Benoit Travers - Développeur full stack freelance",
     siteUrl: "https://www.benoit-travers.fr",
     twitterUsername: "@Benoit_Travers",
   },

@@ -12,10 +12,10 @@ const Hero = () => (
             <img className="mx-3 md:mx-5 lg:mx-10 xl:mx-0 mb-8 max-w-2xl" src={logo} alt="" />
             <h2 className="text-xl md:text-3xl text-center text-primary-800 my-2">développeur full stack senior <br /> basé à Rennes, France</h2>
             <div className="inline-grid grid-cols-2 my-6 gap-5">
-                <a href="https://www.linkedin.com/in/btraversfr/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/btraversfr/" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
                     <LinkedIn />
                 </a>
-                <a href="https://www.github.com/btravers/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.github.com/btravers/" target="_blank" rel="noopener noreferrer" aria-label="github">
                     <GitHub />
                 </a>
             </div>

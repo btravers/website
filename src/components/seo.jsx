@@ -22,7 +22,7 @@ const SEO = () => {
     },
   } = useStaticQuery(query);
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: 'fr' }}>
       <title>{title}</title>
       <meta name="description" content={description} />
 
