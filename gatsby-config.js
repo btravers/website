@@ -15,7 +15,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        name: "Benoit Travers",
+        short_name: `Ben.it`,
+        start_url: `/`,
         icon: "src/images/icon.svg",
+        background_color: `#8D99AE`,
+        theme_color: `#2B2D42`,
+        lang: "fr",
+        display: `standalone`,
       },
     },
     "gatsby-plugin-sharp",
