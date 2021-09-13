@@ -43,6 +43,10 @@ const skillSets = [
           name: "Node.js",
           mark: 2, 
         },
+        {
+          name: "Vert.x",
+          mark: 1, 
+        },
       ],
     },
   
@@ -58,16 +62,16 @@ const skillSets = [
           mark: 3, 
         },
         {
-          name: "MongoDB",
-          mark: 2, 
-        },
-        {
           name: "Apache Kafka",
           mark: 3, 
         },
         {
           name: "RabbitMQ",
           mark: 3, 
+        },
+        {
+          name: "MongoDB",
+          mark: 2, 
         },
       ],
     },
@@ -78,6 +82,10 @@ const skillSets = [
         {
           name: "React.js",
           mark: 3, 
+        },
+        {
+          name: "Cypress",
+          mark: 2, 
         },
       ],
     },
