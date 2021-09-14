@@ -1,128 +1,60 @@
 import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 import EntitledSection from "./EntitledSection"
 import SkillSet from "./SkillSet"
 
 import illustration from "../images/421.svg"
 
-const skillSets = [
-    {
-      name: "Langages",
-      skills: [
-        {
-          name: "Java",
-          mark: 3, 
-        },
-        {
-          name: "Kotlin",
-          mark: 3, 
-        },
-        {
-          name: "JavaScript",
-          mark: 3, 
-        },
-        {
-          name: "TypeScript",
-          mark: 2, 
-        },
-        {
-          name: "Rust",
-          mark: 1,
-        },
-      ],
-    },
-  
-    {
-      name: "Backend",
-      skills: [
-        {
-          name: "Spring Boot",
-          mark: 3, 
-        },
-        {
-          name: "Node.js",
-          mark: 2, 
-        },
-        {
-          name: "Vert.x",
-          mark: 1, 
-        },
-      ],
-    },
-  
-    {
-      name: "Données",
-      skills: [
-        {
-          name: "PostgreSQL",
-          mark: 3, 
-        },
-        {
-          name: "Elasticsearch",
-          mark: 3, 
-        },
-        {
-          name: "Apache Kafka",
-          mark: 3, 
-        },
-        {
-          name: "RabbitMQ",
-          mark: 3, 
-        },
-        {
-          name: "MongoDB",
-          mark: 2, 
-        },
-      ],
-    },
-  
-    {
-      name: "Frontend",
-      skills: [
-        {
-          name: "React.js",
-          mark: 3, 
-        },
-        {
-          name: "Cypress",
-          mark: 2, 
-        },
-      ],
-    },
-  
-    {
-      name: "Autres",
-      skills: [
-        {
-          name: "Docker",
-          mark: 3, 
-        },
-        {
-          name: "Kubernetes",
-          mark: 3, 
-        },
-        {
-          name: "Git",
-          mark: 3, 
-        },
-        {
-          name: "Gitlab CI/CD",
-          mark: 3, 
-        },
-        {
-          name: "Keycloak",
-          mark: 2, 
-        },
-      ],
-    },
+const query = graphql`
+  query skills {
+    allSkillsJson {
+      group(field: category) {
+        nodes {
+          id
+          name
+          mark
+        }
+        fieldValue
+      }
+    }
+  }
+`
+
+const groupTitles = [
+  {
+    group: 'language',
+    title: 'Langages',
+  },
+  {
+    group: 'backend',
+    title: 'Backend',
+  },
+  {
+    group: 'frontend',
+    title: 'Frontend',
+  },
+  {
+    group: 'data',
+    title: 'Données',
+  },
+  {
+    group: 'other',
+    title: 'Autres',
+  },
 ]
 
-const SkillsSection = () => (
+const SkillsSection = () => {
+  const { allSkillsJson: { group: groupedSkills } } = useStaticQuery(query)
+  return (
     <EntitledSection title={{ value: "compétences", illustration }}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10">
-            {skillSets.map(({ name, skills }) => <SkillSet key={name} name={name} skills={skills} />)}
+            {groupTitles
+              .map(({ group, title }) => ({ title, skills: groupedSkills.find(({ fieldValue }) => fieldValue === group).nodes }))
+              .map(({ title, skills }) => <SkillSet key={title} name={title} skills={skills} />)}
         </div>
     </EntitledSection>
-)
+  )
+}
 
 export default SkillsSection

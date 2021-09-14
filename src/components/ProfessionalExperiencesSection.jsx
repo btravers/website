@@ -7,25 +7,25 @@ import Experience from "./Experience"
 import illustration from "../images/90.svg"
 
 const query = graphql`
-query experiences {
-  allMdx(
-    sort: {fields: frontmatter___end, order: DESC}
-    filter: {fileAbsolutePath: {regex: "/(experiences)/.*\\.mdx$/"}}
-  ) {
-    nodes {
-      frontmatter {
-        title
-        organization
-        location
-        start(formatString: "MMM YYYY", locale: "fr")
-        end(formatString: "MMM YYYY", locale: "fr")
-        skills
+  query experiences {
+    allMdx(
+      sort: {fields: frontmatter___end, order: DESC}
+      filter: {fileAbsolutePath: {regex: "/(experiences)/.*\\.mdx$/"}}
+    ) {
+      nodes {
+        frontmatter {
+          title
+          organization
+          location
+          start(formatString: "MMM YYYY", locale: "fr")
+          end(formatString: "MMM YYYY", locale: "fr")
+          skills
+        }
+        id
+        body
       }
-      id
-      body
     }
   }
-}
 `
 
 const ProfessionalExperiencesSection = () => {
