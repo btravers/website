@@ -20,7 +20,7 @@ const Experience = ({ organization, title, location, start, end, skills, body })
         <div>
             <div className="text-xl text-primary-800 font-bold my-1">{organization}</div>
             <div className="text-lg text-primary-800 my-1">{title}</div>
-            <div className="inline-flex gap-10 text-neutral">
+            <div className="inline-flex gap-4 md:gap-10 text-neutral">
                 <Location value={location} />
                 <Calendar start={start} end={end} />
             </div>
