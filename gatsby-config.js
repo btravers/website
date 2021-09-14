@@ -44,10 +44,10 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "experiences",
-        path: "./content/experiences/",
+        name: "content",
+        path: "./content/",
       },
-      __key: "experiences",
+      __key: "content",
     },
 
     {

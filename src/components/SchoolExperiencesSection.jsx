@@ -1,37 +1,50 @@
 import * as React from "react"
-import { v4 as uuidv4 } from "uuid"
+import { useStaticQuery, graphql } from "gatsby"
 
 import EntitledSection from "./EntitledSection"
-import SchoolExperience from "./SchoolExperience"
+import Experience from "./Experience"
 
 import illustration from "../images/94.svg"
 
-const experiences = [
-    {
-      id: uuidv4(),
-      school: "Institut National des Sciences Appliquées",
-      title: "Diplôme d'ingénieur en informatique",
-      location: "Rennes, France",
-      period: {
-        start: new Date(2010, 8),
-        end: new Date(2015, 6),
-      },
+const query = graphql`
+query schools {
+  allMdx(
+    sort: {fields: frontmatter___end, order: DESC}
+    filter: {fileAbsolutePath: {regex: "/(schools)/.*\\.mdx$/"}}
+  ) {
+    nodes {
+      frontmatter {
+        title
+        organization
+        location
+        start(formatString: "MMM YYYY", locale: "fr")
+        end(formatString: "MMM YYYY", locale: "fr")
+        skills
+      }
+      id
+      body
     }
-]
+  }
+}
+`
 
-const SchoolExperiencesSection = () => (
+const SchoolExperiencesSection = () => {
+  const { allMdx: { nodes } } = useStaticQuery(query)
+  return (
     <EntitledSection title={{ value: "études", illustration }}>
         <div>
-            {experiences.map(({id, school, title, location, period}) => (
-              <SchoolExperience 
+            {nodes.map(({ frontmatter: { title, organization, start, end, location }, id }) => (
+              <Experience 
                 key={id} 
-                school={school}
+                organization={organization}
                 title={title}
                 location={location}
-                period={period}
+                start={start}
+                end={end}
               />))}
         </div>
     </EntitledSection>
-)
+  )
+}
 
 export default SchoolExperiencesSection

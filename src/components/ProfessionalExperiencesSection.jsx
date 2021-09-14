@@ -1,18 +1,21 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby"
 
 import EntitledSection from "./EntitledSection"
-import ProfessionalExperience from "./ProfessionalExperience"
+import Experience from "./Experience"
 
 import illustration from "../images/90.svg"
 
 const query = graphql`
 query experiences {
-  allMdx(sort: {fields: frontmatter___end, order: DESC}) {
+  allMdx(
+    sort: {fields: frontmatter___end, order: DESC}
+    filter: {fileAbsolutePath: {regex: "/(experiences)/.*\\.mdx$/"}}
+  ) {
     nodes {
       frontmatter {
         title
-        company
+        organization
         location
         start(formatString: "MMM YYYY", locale: "fr")
         end(formatString: "MMM YYYY", locale: "fr")
@@ -26,19 +29,19 @@ query experiences {
 `
 
 const ProfessionalExperiencesSection = () => {
-  const { allMdx: { nodes } } = useStaticQuery(query);
+  const { allMdx: { nodes } } = useStaticQuery(query)
   return (
       <EntitledSection title={{ value: "expériences", illustration }}>
           <div className="flex flex-col gap-12">
-              {nodes.map(({ frontmatter: { title, company, start, end, location, skills }, id, body }) => (
-                <ProfessionalExperience 
+              {nodes.map(({ frontmatter: { title, organization, start, end, location, skills }, id, body }) => (
+                <Experience 
                   key={id}  
                   title={title}
-                  company={company}
+                  organization={organization}
                   start={start}
                   end={end}
                   location={location}
-                  description={body}
+                  body={body}
                   skills={skills}
                 />
               ))}

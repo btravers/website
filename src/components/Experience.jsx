@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Location from "./Location"
 import Calendar from "./Calendar"
@@ -14,34 +15,36 @@ const h3 = props => <h3 className="text-lg mt-3 mb-2" {...props} />
 
 const components = { ul, li, p, h3 }
 
-const Experience = ({ organisation, title, location, start, end, children }) => (
+const Experience = ({ organization, title, location, start, end, skills, body }) => (
     <MDXProvider components={components}>
         <div>
-            <div className="text-xl text-primary-800 font-bold my-1">{organisation}</div>
+            <div className="text-xl text-primary-800 font-bold my-1">{organization}</div>
             <div className="text-lg text-primary-800 my-1">{title}</div>
             <div className="inline-flex gap-10 text-neutral">
                 <Location value={location} />
                 <Calendar start={start} end={end} />
             </div>
-            {children}
+            {body && <MDXRenderer>{body}</MDXRenderer>}
+            {skills && <div className="inline-flex flex-wrap gap-3 my-3">
+                {skills.map(skill => <div key={skill} className="bg-primary-200 text-primary-800 px-2 py-1 rounded">{skill}</div>)}
+            </div>}
         </div>
     </MDXProvider>
 )
 
 Experience.defaultProps = {
-    children: null,
+    skills: null,
+    body: null,
 }
 
 Experience.propTypes = {
-    organisation: PropTypes.string.isRequired,
+    organization: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     start: PropTypes.string.isRequired,
     end: PropTypes.string.isRequired,
-    children: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node
-    ]),
+    skills: PropTypes.arrayOf(PropTypes.string),
+    body: PropTypes.string,
 }
 
 export default Experience
