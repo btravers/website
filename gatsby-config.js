@@ -7,8 +7,9 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-postcss",
+    
     "gatsby-plugin-gatsby-cloud",
-    "gatsby-plugin-image",
+
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-robots-txt",
@@ -25,6 +26,9 @@ module.exports = {
         display: `standalone`,
       },
     },
+    "gatsby-plugin-offline",
+
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -35,6 +39,7 @@ module.exports = {
       },
       __key: "images",
     },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -52,6 +57,7 @@ module.exports = {
         display: 'swap'
       }
     },
+    
     {
       resolve: "gatsby-plugin-prettier-eslint",
       options: {
