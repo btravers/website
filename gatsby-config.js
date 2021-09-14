@@ -40,6 +40,16 @@ module.exports = {
       __key: "images",
     },
 
+    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "experiences",
+        path: "./src/experiences/",
+      },
+      __key: "experiences",
+    },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {

@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
 import Intro from "../components/Intro"

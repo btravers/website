@@ -1,0 +1,23 @@
+---
+title: "Développeur full stack"
+company: "Cinquième de Couv"
+location: "Rennes, France"
+start: "2016-04-01"
+end: "2017-01-01"
+skills: ["Java", "Spring Boot", "Apache Camel", "JWT", "MongoDB", "JavaScript", "Node.js", "React.js", "Redux", "Docker"]
+---
+
+Cinquième de Couv est une application de conception et d'édition de documents publicitaires (magazines, dépliants, ...) destinée au grand public.
+
+L'application est décomposée en 3 modules techniques :
+
+* Application publique de conception et d'édition de documents
+* Génération PDF haute qualité pour le service d'impression
+* Interface d'administratioon et de conception de modèles de documents
+
+### Mission et tâches principales :
+
+* Conception et développement du produit Cinquième de Couv en environnement agile
+* Développement du frontend avec React.js / Redux
+* Développement d'une API REST en Java / Spring Boot utilisant une base de données MongoDB
+* Développement de micro services techniques en Node.js

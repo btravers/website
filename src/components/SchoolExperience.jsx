@@ -3,12 +3,17 @@ import PropTypes from "prop-types"
 
 import Experience from "./Experience"
 
-const SchoolExperience = ({ school, title, location, period }) => (
+function dateFormatter(date) {
+    return date.toLocaleDateString("fr-FR", { year: "numeric", month: "short" })
+}
+
+const SchoolExperience = ({ school, title, location, period: { start, end } }) => (
     <Experience 
         organisation={school}
         title={title}
         location={location}
-        period={period}
+        start={dateFormatter(start)}
+        end={dateFormatter(end)}
     />
 )
 
