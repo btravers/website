@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import EntitledSection from "./EntitledSection"
 import SkillSet from "./SkillSet"
 
-import illustration from "../images/421.svg"
+import illustration from "../images/93.svg"
 
 const query = graphql`
   query skills {
