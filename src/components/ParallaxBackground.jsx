@@ -108,7 +108,7 @@ Symbol.propTypes = {
 }
 
 const ParallaxBackground = () => (
-    <div className="z-0">
+    <div className="relative z-0">
         {parallaxInformations.map(({ level, symbols: symbolInformation }) => (
             <ParallaxLayer key={level} level={level}>
                 {symbolInformation.map(({id, style, symbol}) => (

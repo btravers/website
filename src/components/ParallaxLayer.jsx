@@ -1,10 +1,12 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 
-const parallaxLevels = ["parallax__layer--base", "parallax__layer--back", "parallax__layer--deep"]
+import { parallaxLayer, parallaxLayerBase, parallaxLayerBack, parallaxLayerDeep } from "./ParallaxLayer.module.css"
+
+const parallaxLevels = [parallaxLayerBase, parallaxLayerBack, parallaxLayerDeep]
 
 const ParallaxLayer = ({ level, children }) => (
-    <div className={`parallax__layer ${parallaxLevels[level]}`}>
+    <div className={`${parallaxLayer} ${parallaxLevels[level]}`}>
         {children}
     </div>
 )
