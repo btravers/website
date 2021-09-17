@@ -16,11 +16,13 @@ const Section = ({ dark, children }) => {
     }
 
     return (
-        <div className={`min-h-screen flex flex-col items-center ${dark ? "bg-primary-800 text-white" : "bg-gray-50 text-primary-800"}`} ref={ref}>
+        <div className={`min-h-screen flex flex-col items-center ${dark ? "bg-primary-800 text-white" : ""}`} ref={ref}>
             <div className="flex-grow w-full flex justify-items-center items-strech">
                 {children}
             </div>
-            <Arrow onClick={jumpToNextSection} />
+            <button type="button" className="cursor-pointer w-full flex justify-center" onClick={jumpToNextSection} onKeyDown={jumpToNextSection}>
+                <Arrow  />
+            </button>
         </div>
     )
 }

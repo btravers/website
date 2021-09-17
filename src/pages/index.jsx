@@ -9,7 +9,7 @@ import SchoolExperiencesSection from "../components/SchoolExperiencesSection"
 import Footer from "../components/Footer"
 
 const IndexPage = () => (
-    <main className="parallax bg-gray-50">
+    <main className="bg-grey-50 text-primary-800">
       <SEO />
           
       <Hero />
