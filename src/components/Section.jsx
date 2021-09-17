@@ -20,7 +20,7 @@ const Section = ({ dark, children }) => {
             <div className="flex-grow w-full flex justify-items-center items-strech">
                 {children}
             </div>
-            <button type="button" className="cursor-pointer w-full flex justify-center" onClick={jumpToNextSection} onKeyDown={jumpToNextSection} aria-label="jump to next section">
+            <button type="button" className="cursor-pointer w-full flex justify-center" onClick={jumpToNextSection} aria-label="jump to next section">
                 <Arrow  />
             </button>
         </div>
