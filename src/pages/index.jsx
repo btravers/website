@@ -6,6 +6,7 @@ import Intro from "../components/Intro"
 import SkillsSection from "../components/SkillsSection"
 import ProfessionalExperiencesSection from "../components/ProfessionalExperiencesSection"
 import SchoolExperiencesSection from "../components/SchoolExperiencesSection"
+import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 
 const IndexPage = () => (
@@ -17,6 +18,9 @@ const IndexPage = () => (
       <SkillsSection />
       <ProfessionalExperiencesSection />
       <SchoolExperiencesSection />
+
+      <Contact />
+
       <Footer />
     </main>
   )
