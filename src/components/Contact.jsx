@@ -31,7 +31,7 @@ TextArea.propTypes = {
 }
 
 const Contact = () => (
-    <div className="w-full bg-primary-800 text-white">
+    <div className="w-full dark">
         <SectionTitle value="Me contacter" illustration={illustration} />
         <form className="conatainer max-w-4xl mx-auto px-5 py-10 flex flex-col gap-5 items-center" method="post" action="https://getform.io/f/96ec8850-3156-47da-9b22-cd5eee9ddf7d">
             <Input label="email" type="email" name="email" />

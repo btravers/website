@@ -16,7 +16,7 @@ const Section = ({ dark, children }) => {
     }
 
     return (
-        <div className={`min-h-screen flex flex-col items-center ${dark ? "bg-primary-800 text-white" : ""}`} ref={ref}>
+        <div className={`min-h-screen flex flex-col items-center ${dark ? "dark" : ""}`} ref={ref}>
             <div className="flex-grow w-full flex justify-items-center items-strech">
                 {children}
             </div>
