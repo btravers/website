@@ -6,7 +6,7 @@ import Section from "./Section"
 const Intro = () => (
     <Section>
         <div className="container max-w-6xl xl:divide-x-2 grid gap-8 xl:grid-cols-3 items-center mx-auto my-10 px-5">
-            <StaticImage className="mx-auto max-w-xs" src="../images/me.jpg" placeholder="blurred" layout="constrained" alt="me" />
+            <StaticImage className="mx-auto rounded-full h-60 w-60 xl:rounded-none xl:h-auto xl:w-auto xl:max-w-xs" src="../images/me.jpg" placeholder="blurred" layout="constrained" alt="me" />
             <div className="xl:col-span-2 flex flex-col gap-6 text-lg xl:pl-8">
                 <p>Avec plus de 6 ans d&apos;expérience en développement logiciel, j&apos;ai été amené à évoluer dans des contextes riches et variés :</p>
                 <ul className="list-disc list-inside pl-8 -mt-6">
