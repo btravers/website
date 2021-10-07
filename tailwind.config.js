@@ -9,7 +9,12 @@ module.exports = {
         "primary-200": '#E1E1EB',
         "secondary": '#EF233C',
         "neutral": '#8D99AE',
-      }
+      },
+      screens: {
+        "print": {
+          "raw": "print",
+        },
+      },
     },
   },
   variants: {

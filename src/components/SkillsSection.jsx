@@ -1,25 +1,10 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 import EntitledSection from "./EntitledSection"
 import SkillSet from "./SkillSet"
+import useGroupedSkills from "./hooks/useGroupedSkills"
 
 import illustration from "../images/93.svg"
-
-const query = graphql`
-  query skills {
-    allSkillsJson {
-      group(field: category) {
-        nodes {
-          id
-          name
-          mark
-        }
-        fieldValue
-      }
-    }
-  }
-`
 
 const groupTitles = [
   {
@@ -45,7 +30,7 @@ const groupTitles = [
 ]
 
 const SkillsSection = () => {
-  const { allSkillsJson: { group: groupedSkills } } = useStaticQuery(query)
+  const groupedSkills = useGroupedSkills()
   return (
     <EntitledSection title={{ value: "compétences", illustration }}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10">

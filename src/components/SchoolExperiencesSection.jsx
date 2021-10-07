@@ -1,35 +1,14 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 import EntitledSection from "./EntitledSection"
 import Experience from "./Experience"
+import useEducation from "./hooks/useEducation"
 
 import illustration from "../images/94.svg"
 
-const query = graphql`
-  query schools {
-    allMdx(
-      sort: {fields: frontmatter___end, order: DESC}
-      filter: {fileAbsolutePath: {regex: "/(schools)/.*\\.mdx$/"}}
-    ) {
-      nodes {
-        frontmatter {
-          title
-          organization
-          location
-          start(formatString: "MMM YYYY", locale: "fr")
-          end(formatString: "MMM YYYY", locale: "fr")
-          skills
-        }
-        id
-        body
-      }
-    }
-  }
-`
 
 const SchoolExperiencesSection = () => {
-  const { allMdx: { nodes } } = useStaticQuery(query)
+  const nodes = useEducation()
   return (
     <EntitledSection title={{ value: "études", illustration }}>
         <div>

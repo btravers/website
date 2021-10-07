@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react"
 import PropTypes from "prop-types"
 
-import Arrow from "./Arrow"
+import ArrowDownIcon from "./icons/ArrowDownIcon"
 
 const Section = ({ dark, children }) => {
     const ref = useRef(null)
@@ -21,7 +21,9 @@ const Section = ({ dark, children }) => {
                 {children}
             </div>
             <button type="button" className="cursor-pointer w-full flex justify-center" onClick={jumpToNextSection} aria-label="jump to next section">
-                <Arrow  />
+                <span className="animate-bounce">
+                    <ArrowDownIcon />
+                </span>
             </button>
         </div>
     )
