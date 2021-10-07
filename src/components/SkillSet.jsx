@@ -9,8 +9,9 @@ const SKillSet = ({ name, skills }) => (
         <div className="divide-y divide-gray-200 divide-solid">
             {
                 skills
-                    .sort(({ mark: m1 }, { mark: m2 }) => m2 - m1)
-                    .map(({ name: skill, mark }) => <Skill key={skill} name={skill} mark={mark} />)
+                    .map(({ name: skill, mark }) => (
+                        <Skill key={skill} name={skill} mark={mark} />
+                    ))
             }
         </div>
     </div>
