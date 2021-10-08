@@ -2,8 +2,8 @@ import * as React from "react"
 
 import Section from "./Section"
 import Header from "./Header"
-import LinkedIn from "./LinkedIn"
-import GitHub from "./GitHub"
+import LinkedIn from "./icons/LinkedIn"
+import GitHub from "./icons/GitHub"
 
 import logo from "../images/logo-large-inverted.svg"
 import workingGuyIllustration from "../images/22.svg"

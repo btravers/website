@@ -1,9 +1,33 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 
-import Location from "./Location"
-import Calendar from "./Calendar"
+import LocationIcon from "./icons/LocationIcon"
+import CalendarIcon from "./icons/CalendarIcon"
 import CustomizedMDXRenderer from "./CustomizedMDXRenderer"
+
+const Location = ({ value }) => (
+    <div className="inline-flex gap-2 items-center">
+        <LocationIcon />
+        <span>{value}</span>
+    </div>
+)
+
+Location.propTypes = {
+    value: PropTypes.string.isRequired,
+}
+
+const Calendar = ({ start, end }) => (
+    <div className="inline-flex gap-2 items-center">
+        <CalendarIcon /> 
+        <span>{start} - {end}</span>
+    </div>
+)
+
+Calendar.propTypes = {
+    start: PropTypes.string.isRequired,
+    end: PropTypes.string.isRequired,
+}
+
 
 const Experience = ({ organization, title, location, start, end, skills, body }) => (
     <div>
