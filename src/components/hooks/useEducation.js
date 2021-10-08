@@ -4,7 +4,7 @@ const query = graphql`
   query schools {
     allMdx(
       sort: {fields: frontmatter___end, order: DESC}
-      filter: {fileAbsolutePath: {regex: "/(schools)/.*\\.mdx$/"}}
+      filter: {fileAbsolutePath: {regex: "/schools/.*\\.mdx$/"}}
     ) {
       nodes {
         frontmatter {

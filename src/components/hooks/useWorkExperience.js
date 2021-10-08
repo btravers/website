@@ -4,7 +4,7 @@ const query = graphql`
   query experiences {
     allMdx(
       sort: {fields: frontmatter___end, order: DESC}
-      filter: {fileAbsolutePath: {regex: "/(experiences)/.*\\.mdx$/"}}
+      filter: {fileAbsolutePath: {regex: "/experiences/.*\\.mdx$/"}}
     ) {
       nodes {
         frontmatter {
