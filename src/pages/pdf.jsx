@@ -1,7 +1,7 @@
 import * as React from "react"
 
 import Page from "../components/pdf/Page"
-import Portrait from "../components/pdf/Portrait"
+import Portrait from "../components/Portrait"
 import Contact from "../components/pdf/Contact"
 import Education from "../components/pdf/Education"
 import Intro from "../components/pdf/Intro"
@@ -13,7 +13,9 @@ const PdfPage = () => (
         <Page first>
             <div className="grid grid-cols-3 items-stretch h-full">
                 <div className="flex flex-col gap-6 pl-16 dark">
-                    <Portrait />
+                    <div className="my-16">
+                        <Portrait />
+                    </div>
                     <Contact />
                     <Education />
                     <Skills />
