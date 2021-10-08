@@ -7,15 +7,6 @@ import CustomizedMDXRenderer from "../CustomizedMDXRenderer"
 
 import * as styles from "./WorkExperience.module.css"
 
-/* eslint-disable react/jsx-props-no-spreading, jsx-a11y/heading-has-content */
-const ul = props => <ul className="list-disc list-inside pl-5" {...props} />
-const li = props => <li className="my-1" {...props} />
-const p = props => <p className="my-1" {...props} />
-const h3 = props => <h3 className="mt-2 mb-1" {...props} />
-/* eslint-enable react/jsx-props-no-spreading, jsx-a11y/heading-has-content */
-
-const components = { ul, li, p, h3 }
-
 const Experience = ({ title, organization, start, end, body, skills }) => (
     <div className="flex flex-col gap-1 page-break-after">
         <div className="flex gap-1 text-xl">
@@ -29,7 +20,9 @@ const Experience = ({ title, organization, start, end, body, skills }) => (
             <span>{end}</span>
         </div>
         <div className="text-gray-700">
-            <CustomizedMDXRenderer components={components}>{body}</CustomizedMDXRenderer>
+            <CustomizedMDXRenderer>
+                {body}
+            </CustomizedMDXRenderer>
         </div>
         <div className="flex flex-row gap-2">
             <div className="flex-none">Compétences :</div>

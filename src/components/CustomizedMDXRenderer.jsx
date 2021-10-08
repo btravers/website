@@ -3,19 +3,22 @@ import PropTypes from "prop-types"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-const CustomizedMDXRenderer = ({ components, children }) => (
+/* eslint-disable react/jsx-props-no-spreading, jsx-a11y/heading-has-content */
+const ul = props => <ul className="list-disc list-inside pl-8 print:pl-5" {...props} />
+const li = props => <li className="my-2 print:my-1" {...props} />
+const p = props => <p className="my-2 print:my-1" {...props} />
+const h3 = props => <h3 className="text-lg mt-3 mb-2 print:text-base print:mt-2 print:mb-1" {...props} />
+/* eslint-enable react/jsx-props-no-spreading, jsx-a11y/heading-has-content */
+
+const components = { ul, li, p, h3 }
+
+const CustomizedMDXRenderer = ({ children }) => (
     <MDXProvider components={components}>
         <MDXRenderer>{children}</MDXRenderer>
     </MDXProvider>
 )
 
 CustomizedMDXRenderer.propTypes = {
-    components: PropTypes.shape({
-        ul: PropTypes.func.isRequired, 
-        li: PropTypes.func.isRequired, 
-        p: PropTypes.func.isRequired, 
-        h3: PropTypes.func.isRequired,
-    }).isRequired,
     children: PropTypes.string.isRequired,
 }
 
