@@ -19,17 +19,14 @@ import Skills from "../components/pdf/Skills"
 
 const IndexPage = () => (
     <main>
+        <SEO />
         <div className="bg-grey-50 text-primary-800 print:hidden">
-            <SEO />
-            
             <Hero />
             <Intro />
             <SkillsSection />
             <ProfessionalExperiencesSection />
             <SchoolExperiencesSection />
-      
             <Contact />
-      
             <Footer />
         </div>
         <div className="hidden print:block">

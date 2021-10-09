@@ -1,4 +1,5 @@
 import * as React from "react"
+import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -15,15 +16,15 @@ const query = graphql`
   }
 `
 
-const SEO = () => {
+const SEO = ({ title }) => {
   const {
     site: {
-      siteMetadata: { title, description, siteUrl, twitterUsername },
+      siteMetadata: { title: defaultTitle, description, siteUrl, twitterUsername },
     },
   } = useStaticQuery(query)
   return (
     <Helmet htmlAttributes={{ lang: 'fr' }}>
-      <title>{title}</title>
+      <title>{title ? `${defaultTitle} | ${title}` : defaultTitle}</title>
       <meta name="description" content={description} />
 
       <meta property="og:url" content={siteUrl} />
@@ -36,6 +37,14 @@ const SEO = () => {
       <meta name="twitter:description" content={description} />
     </Helmet>
   )
+}
+
+SEO.propTypes = {
+  title: PropTypes.string,
+}
+
+SEO.defaultProps = {
+  title: null,
 }
 
 export default SEO
