@@ -8,7 +8,7 @@ import CustomizedMDXRenderer from "../CustomizedMDXRenderer"
 import * as styles from "./WorkExperience.module.css"
 
 const Experience = ({ title, organization, start, end, body, skills }) => (
-    <div className="flex flex-col gap-1 page-break-after">
+    <div className="flex flex-col gap-1">
         <div className="flex gap-1 text-xl">
             <span className="font-bold">{organization}</span>
             /

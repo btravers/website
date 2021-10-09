@@ -1,12 +1,10 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import me from "../images/me.jpg"
 
 const Portrait = () => (
-    <StaticImage 
-        className="rounded-full h-60 w-60 xl:rounded-none xl:h-auto xl:w-auto xl:max-w-xs" 
-        src="../../images/me.jpg" 
-        placeholder="blurred" 
-        layout="constrained" 
+    <img 
+        className="object-cover rounded-full w-60 h-60 xl:rounded-none xl:h-auto xl:w-auto xl:max-w-xs" 
+        src={me} 
         alt="me" 
     />
 )
