@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import {useStaticQuery, graphql} from "gatsby"
 
 const query = graphql`
   query experiences {
@@ -23,7 +23,7 @@ const query = graphql`
 `
 
 function useWorkExperience() {
-    const { allMdx: { nodes } } = useStaticQuery(query)
+    const {allMdx: {nodes}} = useStaticQuery(query)
     return nodes
 }
 

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import * as styles from "./Page.module.css"
 
-const Page = ({ margin, children }) => (
+const Page = ({margin, children}) => (
     <div className={`${styles.page} ${margin ? "px-28 py-20" : ""}`}>
         {children}
     </div>

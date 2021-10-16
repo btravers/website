@@ -8,22 +8,22 @@ import illustration from "../images/94.svg"
 
 
 const SchoolExperiencesSection = () => {
-  const nodes = useEducation()
-  return (
-    <EntitledSection title={{ value: "études", illustration }}>
-        <div>
-            {nodes.map(({ frontmatter: { title, organization, start, end, location }, id }) => (
-              <Experience 
-                key={id} 
-                organization={organization}
-                title={title}
-                location={location}
-                start={start}
-                end={end}
-              />))}
-        </div>
-    </EntitledSection>
-  )
+    const nodes = useEducation()
+    return (
+        <EntitledSection title={{value: "études", illustration}}>
+            <div>
+                {nodes.map(({frontmatter: {title, organization, start, end, location}, id}) => (
+                    <Experience
+                        key={id}
+                        organization={organization}
+                        title={title}
+                        location={location}
+                        start={start}
+                        end={end}
+                    />))}
+            </div>
+        </EntitledSection>
+    )
 }
 
 export default SchoolExperiencesSection

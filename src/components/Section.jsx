@@ -1,18 +1,18 @@
-import React, { useRef, useState, useEffect } from "react"
+import React, {useRef, useState, useEffect} from "react"
 import PropTypes from "prop-types"
 
 import ArrowDownIcon from "./icons/ArrowDownIcon"
 
-const Section = ({ dark, children }) => {
+const Section = ({dark, children}) => {
     const ref = useRef(null)
 
     const [anchorTarget, setAnchorTarget] = useState(null)
-    
+
     useEffect(() => setAnchorTarget(ref.current.nextSibling), [ref.current])
 
     const jumpToNextSection = event => {
         event.preventDefault()
-        anchorTarget.scrollIntoView({ behavior: "smooth", block: "start" })
+        anchorTarget.scrollIntoView({behavior: "smooth", block: "start"})
     }
 
     return (
@@ -20,9 +20,10 @@ const Section = ({ dark, children }) => {
             <div className="flex-grow w-full flex justify-items-center items-strech">
                 {children}
             </div>
-            <button type="button" className="cursor-pointer w-full flex justify-center" onClick={jumpToNextSection} aria-label="jump to next section">
+            <button type="button" className="cursor-pointer w-full flex justify-center" onClick={jumpToNextSection}
+                    aria-label="jump to next section">
                 <span className="animate-bounce">
-                    <ArrowDownIcon />
+                    <ArrowDownIcon/>
                 </span>
             </button>
         </div>

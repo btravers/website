@@ -7,7 +7,7 @@ import CustomizedMDXRenderer from "../CustomizedMDXRenderer"
 
 import * as styles from "./WorkExperience.module.css"
 
-const Experience = ({ title, organization, start, end, body, skills }) => (
+const Experience = ({title, organization, start, end, body, skills}) => (
     <div className="flex flex-col gap-1">
         <div className="flex gap-1 text-xl">
             <span className="font-bold">{organization}</span>
@@ -45,7 +45,7 @@ Experience.propTypes = {
     skills: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
-const WorkExperience = ({ offset, size }) => {
+const WorkExperience = ({offset, size}) => {
     const experience = useWorkExperience()
     return (
         <Part title={offset === 0 ? "expérience" : null}>
@@ -53,11 +53,11 @@ const WorkExperience = ({ offset, size }) => {
                 {
                     experience
                         .slice(offset, offset + (size || experience.length))
-                        .map(({ frontmatter: { title, organization, start, end, location, skills }, body, id }) => (
-                            <Experience 
-                                key={id} 
-                                title={title} 
-                                organization={organization} 
+                        .map(({frontmatter: {title, organization, start, end, location, skills}, body, id}) => (
+                            <Experience
+                                key={id}
+                                title={title}
+                                organization={organization}
                                 location={location}
                                 start={start}
                                 end={end}

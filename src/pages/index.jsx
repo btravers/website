@@ -19,41 +19,41 @@ import Skills from "../components/pdf/Skills"
 
 const IndexPage = () => (
     <main>
-        <SEO />
+        <SEO/>
         <div className="bg-grey-50 text-primary-800 print:hidden">
-            <Hero />
-            <Intro />
-            <SkillsSection />
-            <ProfessionalExperiencesSection />
-            <SchoolExperiencesSection />
-            <Contact />
-            <Footer />
+            <Hero/>
+            <Intro/>
+            <SkillsSection/>
+            <ProfessionalExperiencesSection/>
+            <SchoolExperiencesSection/>
+            <Contact/>
+            <Footer/>
         </div>
         <div className="hidden print:block">
-          <Page first>
+            <Page first>
                 <div className="grid grid-cols-3 items-stretch h-full">
                     <div className="flex flex-col gap-6 pl-16 dark">
                         <div className="my-16">
-                            <Portrait />
+                            <Portrait/>
                         </div>
-                        <PdfContact />
-                        <Education />
-                        <Skills />
+                        <PdfContact/>
+                        <Education/>
+                        <Skills/>
                     </div>
                     <div className="col-span-2 flex flex-col gap-16 text-primary-800 px-12">
-                        <PdfIntro />
-                        <WorkExperience offset={0} size={3} />
+                        <PdfIntro/>
+                        <WorkExperience offset={0} size={3}/>
                     </div>
                 </div>
             </Page>
             <Page margin>
-                <WorkExperience offset={3} size={3} />
+                <WorkExperience offset={3} size={3}/>
             </Page>
             <Page margin>
-                <WorkExperience offset={6} />
+                <WorkExperience offset={6}/>
             </Page>
         </div>
     </main>
-  )
+)
 
 export default IndexPage

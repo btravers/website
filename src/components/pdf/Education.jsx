@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import Part from "./Part"
 import useEducation from "../hooks/useEducation"
 
-const Experience = ({ title, organization, location, start, end }) => (
+const Experience = ({title, organization, location, start, end}) => (
     <div className="flex flex-col gap-1">
         <div className="font-bold">{title}</div>
         <div>{organization}</div>
@@ -31,11 +31,11 @@ const Education = () => {
         <Part title="éducation">
             {
                 education
-                    .map(({ frontmatter: { title, organization, start, end, location }, id }) => (
-                        <Experience 
-                            key={id} 
-                            title={title} 
-                            organization={organization} 
+                    .map(({frontmatter: {title, organization, start, end, location}, id}) => (
+                        <Experience
+                            key={id}
+                            title={title}
+                            organization={organization}
                             location={location}
                             start={start}
                             end={end}
