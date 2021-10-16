@@ -6,7 +6,7 @@ import IntroSection from "../components/IntroSection"
 import SkillsSection from "../components/SkillsSection"
 import ProfessionalExperiencesSection from "../components/ProfessionalExperiencesSection"
 import SchoolExperiencesSection from "../components/SchoolExperiencesSection"
-import Contact from "../components/Contact"
+import ContactSection from "../components/ContactSection"
 import Footer from "../components/Footer"
 
 import Page from "../components/pdf/Page"
@@ -26,7 +26,7 @@ const IndexPage = () => (
             <SkillsSection/>
             <ProfessionalExperiencesSection/>
             <SchoolExperiencesSection/>
-            <Contact/>
+            <ContactSection/>
             <Footer/>
         </div>
         <div className="hidden print:block">

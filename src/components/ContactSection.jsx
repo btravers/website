@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import SectionTitle from "./SectionTitle"
+
+import EntitledSection from "./EntitledSection";
 
 import illustration from "../images/43.svg"
 
@@ -40,11 +41,10 @@ TextArea.propTypes = {
     name: PropTypes.string.isRequired,
 }
 
-const Contact = () => (
-    <div className="w-full dark">
-        <SectionTitle value="Me contacter" illustration={illustration}/>
+const ContactSection = () => (
+    <EntitledSection title={{value: "Me contacter", illustration}} dark hideNextButton>
         <form
-            className="container max-w-4xl mx-auto px-5 py-10 flex flex-col gap-5 items-center"
+            className="w-full mx-auto max-w-4xl px-5 flex flex-col gap-5 items-center"
             method="post"
             action="https://getform.io/f/96ec8850-3156-47da-9b22-cd5eee9ddf7d"
         >
@@ -56,7 +56,7 @@ const Contact = () => (
                 <input className="btn border border-white bg-primary-800 text-white" type="reset" value="Annuler"/>
             </div>
         </form>
-    </div>
+    </EntitledSection>
 )
 
-export default Contact
+export default ContactSection

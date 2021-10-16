@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import ArrowDownIcon from "./icons/ArrowDownIcon"
 
-const Section = ({dark, children}) => {
+const Section = ({dark, hideNextButton, children}) => {
     const ref = useRef(null)
 
     const [anchorTarget, setAnchorTarget] = useState(null)
@@ -20,22 +20,31 @@ const Section = ({dark, children}) => {
             <div className="flex-grow w-full flex justify-items-center items-strech">
                 {children}
             </div>
-            <button type="button" className="cursor-pointer w-full flex justify-center" onClick={jumpToNextSection}
-                    aria-label="jump to next section">
+            {
+                hideNextButton ||
+                <button
+                    type="button"
+                    className="cursor-pointer w-full flex justify-center"
+                    onClick={jumpToNextSection}
+                    aria-label="jump to next section"
+                >
                 <span className="animate-bounce">
                     <ArrowDownIcon/>
                 </span>
-            </button>
+                </button>
+            }
         </div>
     )
 }
 
 Section.defaultProps = {
     dark: false,
+    hideNextButton: false,
 }
 
 Section.propTypes = {
     dark: PropTypes.bool,
+    hideNextButton: PropTypes.bool,
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node
