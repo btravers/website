@@ -25,7 +25,7 @@ Experience.propTypes = {
     end: PropTypes.string.isRequired,
 }
 
-const Education = () => {
+const EducationPart = () => {
     const education = useEducation()
     return (
         <Part title="éducation">
@@ -46,4 +46,4 @@ const Education = () => {
     )
 }
 
-export default Education
+export default EducationPart

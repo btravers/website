@@ -2,7 +2,7 @@ import * as React from "react"
 
 import SEO from "../components/SEO"
 import Hero from "../components/Hero"
-import Intro from "../components/Intro"
+import IntroSection from "../components/IntroSection"
 import SkillsSection from "../components/SkillsSection"
 import ProfessionalExperiencesSection from "../components/ProfessionalExperiencesSection"
 import SchoolExperiencesSection from "../components/SchoolExperiencesSection"
@@ -11,10 +11,10 @@ import Footer from "../components/Footer"
 
 import Page from "../components/pdf/Page"
 import Portrait from "../components/Portrait"
-import PdfContact from "../components/pdf/Contact"
-import Education from "../components/pdf/Education"
-import PdfIntro from "../components/pdf/Intro"
-import WorkExperience from "../components/pdf/WorkExperience"
+import PdfContact from "../components/pdf/ContactPart"
+import EducationPart from "../components/pdf/EducationPart"
+import PdfIntro from "../components/pdf/IntroPart"
+import WorkExperiencePart from "../components/pdf/WorkExperiencePart"
 import SkillsPart from "../components/pdf/SkillsPart"
 
 const IndexPage = () => (
@@ -22,7 +22,7 @@ const IndexPage = () => (
         <SEO/>
         <div className="bg-grey-50 text-primary-800 print:hidden">
             <Hero/>
-            <Intro/>
+            <IntroSection/>
             <SkillsSection/>
             <ProfessionalExperiencesSection/>
             <SchoolExperiencesSection/>
@@ -37,20 +37,20 @@ const IndexPage = () => (
                             <Portrait/>
                         </div>
                         <PdfContact/>
-                        <Education/>
+                        <EducationPart/>
                         <SkillsPart/>
                     </div>
                     <div className="col-span-2 flex flex-col gap-16 text-primary-800 px-12">
                         <PdfIntro/>
-                        <WorkExperience offset={0} size={3}/>
+                        <WorkExperiencePart offset={0} size={3}/>
                     </div>
                 </div>
             </Page>
             <Page margin>
-                <WorkExperience offset={3} size={3}/>
+                <WorkExperiencePart offset={3} size={3}/>
             </Page>
             <Page margin>
-                <WorkExperience offset={6}/>
+                <WorkExperiencePart offset={6}/>
             </Page>
         </div>
     </main>

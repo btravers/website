@@ -5,7 +5,7 @@ import Portrait from "./Portrait"
 import CustomizedMDXRenderer from "./CustomizedMDXRenderer"
 import useIntro from "./hooks/useIntro"
 
-const Intro = () => {
+const IntroSection = () => {
     const intro = useIntro()
     return (
         <Section>
@@ -24,4 +24,4 @@ const Intro = () => {
     )
 }
 
-export default Intro
+export default IntroSection

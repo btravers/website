@@ -3,7 +3,7 @@ import React from "react"
 import CustomizedMDXRenderer from "../CustomizedMDXRenderer"
 import useIntro from "../hooks/useIntro"
 
-const Intro = () => {
+const IntroPart = () => {
     const intro = useIntro()
     return (
         <div>
@@ -20,4 +20,4 @@ const Intro = () => {
     )
 }
 
-export default Intro
+export default IntroPart

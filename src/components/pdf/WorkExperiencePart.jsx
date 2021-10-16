@@ -43,7 +43,7 @@ Experience.propTypes = {
     skills: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
-const WorkExperience = ({offset, size}) => {
+const WorkExperiencePart = ({offset, size}) => {
     const experience = useWorkExperience()
     return (
         <Part title={offset === 0 ? "expérience" : null}>
@@ -69,13 +69,13 @@ const WorkExperience = ({offset, size}) => {
     )
 }
 
-WorkExperience.propTypes = {
+WorkExperiencePart.propTypes = {
     offset: PropTypes.number.isRequired,
     size: PropTypes.number,
 }
 
-WorkExperience.defaultProps = {
+WorkExperiencePart.defaultProps = {
     size: null,
 }
 
-export default WorkExperience
+export default WorkExperiencePart
