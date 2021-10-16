@@ -11,9 +11,9 @@ import Footer from "../components/Footer"
 
 import Page from "../components/pdf/Page"
 import Portrait from "../components/Portrait"
-import PdfContact from "../components/pdf/ContactPart"
+import ContactPart from "../components/pdf/ContactPart"
 import EducationPart from "../components/pdf/EducationPart"
-import PdfIntro from "../components/pdf/IntroPart"
+import IntroPart from "../components/pdf/IntroPart"
 import WorkExperiencePart from "../components/pdf/WorkExperiencePart"
 import SkillsPart from "../components/pdf/SkillsPart"
 
@@ -36,12 +36,12 @@ const IndexPage = () => (
                         <div className="my-16">
                             <Portrait/>
                         </div>
-                        <PdfContact/>
+                        <ContactPart/>
                         <EducationPart/>
                         <SkillsPart/>
                     </div>
                     <div className="col-span-2 flex flex-col gap-16 text-primary-800 px-12">
-                        <PdfIntro/>
+                        <IntroPart/>
                         <WorkExperiencePart offset={0} size={3}/>
                     </div>
                 </div>
