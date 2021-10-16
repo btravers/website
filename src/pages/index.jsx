@@ -15,7 +15,7 @@ import PdfContact from "../components/pdf/Contact"
 import Education from "../components/pdf/Education"
 import PdfIntro from "../components/pdf/Intro"
 import WorkExperience from "../components/pdf/WorkExperience"
-import Skills from "../components/pdf/Skills"
+import SkillsPart from "../components/pdf/SkillsPart"
 
 const IndexPage = () => (
     <main>
@@ -38,7 +38,7 @@ const IndexPage = () => (
                         </div>
                         <PdfContact/>
                         <Education/>
-                        <Skills/>
+                        <SkillsPart/>
                     </div>
                     <div className="col-span-2 flex flex-col gap-16 text-primary-800 px-12">
                         <PdfIntro/>

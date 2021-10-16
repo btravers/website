@@ -5,8 +5,6 @@ import useWorkExperience from "../hooks/useWorkExperience"
 import Part from "./Part"
 import CustomizedMDXRenderer from "../CustomizedMDXRenderer"
 
-import * as styles from "./WorkExperience.module.css"
-
 const Experience = ({title, organization, start, end, body, skills}) => (
     <div className="flex flex-col gap-1">
         <div className="flex gap-1 text-xl">
@@ -26,7 +24,7 @@ const Experience = ({title, organization, start, end, body, skills}) => (
         </div>
         <div className="flex flex-row gap-2">
             <div className="flex-none">Compétences :</div>
-            <ul className={`inline-flex flex-row flex-wrap flex-auto gap-1 ${styles.commaList}`}>
+            <ul className="inline-flex flex-row flex-wrap flex-auto gap-1 comma-list">
                 {
                     skills
                         .map(skill => <li key={skill}>{skill}</li>)
