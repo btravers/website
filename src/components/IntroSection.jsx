@@ -10,7 +10,7 @@ const IntroSection = () => {
     return (
         <Section>
             <div
-                className="container max-w-6xl xl:divide-x-2 grid gap-8 xl:grid-cols-3 items-center mx-auto my-10 px-5">
+                className="max-w-6xl mx-auto w-full xl:divide-x-2 grid gap-8 xl:grid-cols-3 items-center mx-auto my-10 px-5">
                 <div className="mx-auto">
                     <Portrait/>
                 </div>

@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import EntitledSection from "./EntitledSection";
+import Section from "./Section";
 
 import illustration from "../images/43.svg"
 
 const Input = ({label, type, name}) => (
-    <div className="flex flex-col w-full">
+    <div className="max-w-5xl mx-auto flex flex-col w-full">
         <label className="capitalize font-light" htmlFor={name}>{label}</label>
         <input
             className="rounded mt-2 mb-6 py-2 px-4 text-primary-800 focus:outline-none"
@@ -42,9 +42,9 @@ TextArea.propTypes = {
 }
 
 const ContactSection = () => (
-    <EntitledSection title={{value: "Me contacter", illustration}} dark hideNextButton>
+    <Section title={{value: "Me contacter", illustration}} dark hideNextButton>
         <form
-            className="w-full mx-auto max-w-4xl px-5 flex flex-col gap-5 items-center"
+            className="max-w-4xl w-full mx-auto px-5 flex flex-col gap-5 items-center"
             method="post"
             action="https://getform.io/f/96ec8850-3156-47da-9b22-cd5eee9ddf7d"
         >
@@ -56,7 +56,7 @@ const ContactSection = () => (
                 <input className="btn border border-white bg-primary-800 text-white" type="reset" value="Annuler"/>
             </div>
         </form>
-    </EntitledSection>
+    </Section>
 )
 
 export default ContactSection

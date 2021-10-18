@@ -3,7 +3,19 @@ import PropTypes from "prop-types"
 
 import ArrowDownIcon from "./icons/ArrowDownIcon"
 
-const Section = ({dark, hideNextButton, children}) => {
+const SectionTitle = ({value, illustration}) => (
+    <div className="w-full dark flex flex-col items-center py-8 mb-10">
+        <img className="mx-auto h-32 w-auto" src={illustration} alt=""/>
+        <h3 className="text-4xl capitalize">{value}</h3>
+    </div>
+)
+
+SectionTitle.propTypes = {
+    value: PropTypes.string.isRequired,
+    illustration: PropTypes.string.isRequired,
+}
+
+const Section = ({title, dark, hideNextButton, children}) => {
     const ref = useRef(null)
 
     const [anchorTarget, setAnchorTarget] = useState(null)
@@ -17,8 +29,11 @@ const Section = ({dark, hideNextButton, children}) => {
 
     return (
         <div className={`min-h-screen flex flex-col items-center ${dark ? "dark" : ""}`} ref={ref}>
-            <div className="flex-grow w-full flex justify-items-center items-strech">
-                {children}
+            <div className="flex-grow w-full flex flex-col">
+                { title && <SectionTitle value={title.value} illustration={title.illustration}/> }
+                <div className="flex-grow flex w-full container mx-auto px-5">
+                    {children}
+                </div>
             </div>
             {
                 hideNextButton ||
@@ -28,7 +43,7 @@ const Section = ({dark, hideNextButton, children}) => {
                     onClick={jumpToNextSection}
                     aria-label="jump to next section"
                 >
-                <span className="animate-bounce">
+                <span className="animate-bounce pt-10">
                     <ArrowDownIcon/>
                 </span>
                 </button>
@@ -38,11 +53,16 @@ const Section = ({dark, hideNextButton, children}) => {
 }
 
 Section.defaultProps = {
+    title: null,
     dark: false,
     hideNextButton: false,
 }
 
 Section.propTypes = {
+    title: PropTypes.shape({
+        value: PropTypes.string.isRequired,
+        illustration: PropTypes.string.isRequired,
+    }),
     dark: PropTypes.bool,
     hideNextButton: PropTypes.bool,
     children: PropTypes.oneOfType([

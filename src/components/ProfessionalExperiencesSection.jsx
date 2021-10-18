@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import EntitledSection from "./EntitledSection"
+import Section from "./Section"
 import Experience from "./Experience"
 import useWorkExperience from "./hooks/useWorkExperience"
 
@@ -9,8 +9,8 @@ import illustration from "../images/90.svg"
 const ProfessionalExperiencesSection = () => {
     const nodes = useWorkExperience()
     return (
-        <EntitledSection title={{value: "expériences", illustration}}>
-            <div className="flex flex-col gap-12">
+        <Section title={{value: "expériences", illustration}}>
+            <div className="max-w-5xl mx-auto flex flex-col gap-12">
                 {nodes.map(({frontmatter: {title, organization, start, end, location, skills}, id, body}) => (
                     <Experience
                         key={id}
@@ -24,7 +24,7 @@ const ProfessionalExperiencesSection = () => {
                     />
                 ))}
             </div>
-        </EntitledSection>
+        </Section>
     )
 }
 

@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import EntitledSection from "./EntitledSection"
+import Section from "./Section"
 import Experience from "./Experience"
 import useEducation from "./hooks/useEducation"
 
@@ -10,8 +10,8 @@ import illustration from "../images/94.svg"
 const SchoolExperiencesSection = () => {
     const nodes = useEducation()
     return (
-        <EntitledSection title={{value: "études", illustration}}>
-            <div>
+        <Section title={{value: "études", illustration}}>
+            <div className="max-w-5xl mx-auto w-full">
                 {nodes.map(({frontmatter: {title, organization, start, end, location}, id}) => (
                     <Experience
                         key={id}
@@ -22,7 +22,7 @@ const SchoolExperiencesSection = () => {
                         end={end}
                     />))}
             </div>
-        </EntitledSection>
+        </Section>
     )
 }
 
