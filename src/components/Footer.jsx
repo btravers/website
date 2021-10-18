@@ -14,7 +14,7 @@ FooterRef.propTypes = {
 }
 
 const Footer = () => (
-    <footer className="w-full dark flex flex-col items-center gap-1 px-5 py-12">
+    <footer className="w-full dark flex flex-col items-center gap-1 px-5 py-12 print:hidden">
         <div>Handcrafted with ❤️ by me</div>
         <div>Using <FooterRef href="https://www.gatsbyjs.com/">Gatsby</FooterRef> + <FooterRef
             href="https://tailwindcss.com/">tailwindcss</FooterRef></div>
