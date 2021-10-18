@@ -6,8 +6,7 @@ import useEducation from "./hooks/useEducation"
 
 import illustration from "../images/94.svg"
 
-
-const SchoolExperiencesSection = () => {
+const EducationSection = () => {
     const nodes = useEducation()
     return (
         <Section title={{value: "études", illustration}}>
@@ -26,4 +25,4 @@ const SchoolExperiencesSection = () => {
     )
 }
 
-export default SchoolExperiencesSection
+export default EducationSection

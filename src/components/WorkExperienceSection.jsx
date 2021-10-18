@@ -6,7 +6,7 @@ import useWorkExperience from "./hooks/useWorkExperience"
 
 import illustration from "../images/90.svg"
 
-const ProfessionalExperiencesSection = () => {
+const WorkExperienceSection = () => {
     const nodes = useWorkExperience()
     return (
         <Section title={{value: "expériences", illustration}}>
@@ -28,4 +28,4 @@ const ProfessionalExperiencesSection = () => {
     )
 }
 
-export default ProfessionalExperiencesSection
+export default WorkExperienceSection

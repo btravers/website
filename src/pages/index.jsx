@@ -4,8 +4,8 @@ import SEO from "../components/SEO"
 import TitleSection from "../components/TitleSection"
 import IntroSection from "../components/IntroSection"
 import SkillsSection from "../components/SkillsSection"
-import ProfessionalExperiencesSection from "../components/ProfessionalExperiencesSection"
-import SchoolExperiencesSection from "../components/SchoolExperiencesSection"
+import WorkExperienceSection from "../components/WorkExperienceSection"
+import EducationSection from "../components/EducationSection"
 import ContactSection from "../components/ContactSection"
 import Footer from "../components/Footer"
 
@@ -24,8 +24,8 @@ const IndexPage = () => (
             <TitleSection/>
             <IntroSection/>
             <SkillsSection/>
-            <ProfessionalExperiencesSection/>
-            <SchoolExperiencesSection/>
+            <WorkExperienceSection/>
+            <EducationSection/>
             <ContactSection/>
             <Footer/>
         </div>
