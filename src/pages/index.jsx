@@ -12,7 +12,6 @@ import Footer from "../components/Footer"
 import Page from "../components/pdf/Page"
 import Portrait from "../components/Portrait"
 import ContactSection from "../components/ContactSection"
-import EducationPart from "../components/pdf/EducationPart"
 import WorkExperiencePart from "../components/pdf/WorkExperiencePart"
 
 const IndexPage = () => (
@@ -35,7 +34,7 @@ const IndexPage = () => (
                             <Portrait/>
                         </div>
                         <ContactSection/>
-                        <EducationPart/>
+                        <EducationSection/>
                         <SkillsSection/>
                     </div>
                     <div className="col-span-2 flex flex-col gap-8 text-primary-800 px-12 py-10">

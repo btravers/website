@@ -5,14 +5,18 @@ import ArrowDownIcon from "./icons/ArrowDownIcon"
 
 const SectionTitle = ({value, illustration}) => (
     <div className="w-full dark flex flex-col items-center py-8 mb-10 print:items-start print:py-0 print:my-2">
-        <img className="mx-auto h-32 w-auto print:hidden" src={illustration} alt=""/>
+        {illustration && <img className="mx-auto h-32 w-auto print:hidden" src={illustration} alt=""/>}
         <h3 className="text-4xl capitalize print:text-2xl print:uppercase">{value}</h3>
     </div>
 )
 
+SectionTitle.defaultProps = {
+    illustration: null,
+}
+
 SectionTitle.propTypes = {
     value: PropTypes.string.isRequired,
-    illustration: PropTypes.string.isRequired,
+    illustration: PropTypes.string,
 }
 
 const Section = ({title, dark, hideNextButton, children}) => {
@@ -61,7 +65,7 @@ Section.defaultProps = {
 Section.propTypes = {
     title: PropTypes.shape({
         value: PropTypes.string.isRequired,
-        illustration: PropTypes.string.isRequired,
+        illustration: PropTypes.string,
     }),
     dark: PropTypes.bool,
     hideNextButton: PropTypes.bool,
