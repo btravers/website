@@ -8,11 +8,9 @@ import WorkExperienceSection from "../components/WorkExperienceSection"
 import EducationSection from "../components/EducationSection"
 import ContactFormSection from "../components/ContactFormSection"
 import Footer from "../components/Footer"
-
-import Page from "../components/pdf/Page"
+import Page from "../components/Page"
 import Portrait from "../components/Portrait"
 import ContactSection from "../components/ContactSection"
-import WorkExperiencePart from "../components/pdf/WorkExperiencePart"
 
 const IndexPage = () => (
     <main>
@@ -40,15 +38,15 @@ const IndexPage = () => (
                     <div className="col-span-2 flex flex-col gap-8 text-primary-800 px-12 py-10">
                         <TitleSection/>
                         <IntroSection/>
-                        <WorkExperiencePart offset={0} size={3}/>
+                        <WorkExperienceSection offset={0} size={3}/>
                     </div>
                 </div>
             </Page>
             <Page margin>
-                <WorkExperiencePart offset={3} size={3}/>
+                <WorkExperienceSection offset={3} size={3}/>
             </Page>
             <Page margin>
-                <WorkExperiencePart offset={6}/>
+                <WorkExperienceSection offset={6}/>
             </Page>
         </div>
     </main>

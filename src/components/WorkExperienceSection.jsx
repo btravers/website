@@ -11,14 +11,21 @@ import CustomizedMDXRenderer from "./CustomizedMDXRenderer"
 import illustration from "../images/90.svg"
 
 const Experience = ({organization, title, location, start, end, skills, body}) => (
-    <div>
-        <div className="text-xl text-primary-800 font-bold my-1">{organization}</div>
-        <div className="text-lg text-primary-800 my-1">{title}</div>
+    <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 text-primary-800 print:flex-row">
+            <div className="text-xl font-bold">{organization}</div>
+            <span className="hidden print:block">/</span>
+            <div className="text-lg">{title}</div>
+        </div>
         <div className="inline-flex gap-4 md:gap-10 text-gray-500">
-            <Location value={location}/>
+            <span className="print:hidden">
+                <Location value={location}/>
+            </span>
             <Calendar start={start} end={end}/>
         </div>
-        <CustomizedMDXRenderer>{body}</CustomizedMDXRenderer>
+        <div>
+            <CustomizedMDXRenderer>{body}</CustomizedMDXRenderer>
+        </div>
         <div className="inline-flex flex-wrap gap-3 my-3">
             {
                 skills.map(skill => (
@@ -43,26 +50,40 @@ Experience.propTypes = {
     body: PropTypes.string.isRequired,
 }
 
-const WorkExperienceSection = () => {
+const WorkExperienceSection = ({offset, size}) => {
     const nodes = useWorkExperience()
     return (
-        <Section title={{value: "expériences", illustration}}>
-            <div className="max-w-5xl mx-auto flex flex-col gap-12">
-                {nodes.map(({frontmatter: {title, organization, start, end, location, skills}, id, body}) => (
-                    <Experience
-                        key={id}
-                        title={title}
-                        organization={organization}
-                        start={start}
-                        end={end}
-                        location={location}
-                        body={body}
-                        skills={skills}
-                    />
-                ))}
+        <Section title={offset === 0 ? {value: "expériences", illustration} : null}>
+            <div className="max-w-5xl mx-auto flex flex-col gap-12 print:gap-9">
+                {
+                    nodes
+                        .slice(offset, offset + (size || nodes.length))
+                        .map(({frontmatter: {title, organization, start, end, location, skills}, id, body}) => (
+                            <Experience
+                                key={id}
+                                title={title}
+                                organization={organization}
+                                start={start}
+                                end={end}
+                                location={location}
+                                body={body}
+                                skills={skills}
+                            />
+                        ))
+                }
             </div>
         </Section>
     )
+}
+
+WorkExperienceSection.defaultProps = {
+    offset: 0,
+    size: null,
+}
+
+WorkExperienceSection.propTypes = {
+    offset: PropTypes.number,
+    size: PropTypes.number,
 }
 
 export default WorkExperienceSection

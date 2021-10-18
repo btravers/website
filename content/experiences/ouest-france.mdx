@@ -1,40 +1,40 @@
 ---
-title: "Lead développeur backend"
-organization: "Ouest-France"
-location: "Rennes, France"
-start: "2018-01-01"
-end: "2019-09-15"
+title: 'Lead développeur backend'
+organization: 'Ouest-France'
+location: 'Rennes, France'
+start: '2018-01-01'
+end: '2019-09-15'
 skills:
-  [
-    "Kotlin",
-    "Java",
-    "Spring Boot",
-    "Spring Webflux",
-    "Elasticsearch",
-    "RabbitMQ",
-    "PostgreSQL",
-    "Kubernetes",
-    "Docker",
-    "Prometheus",
-    "Grafana",
-    "Kafka",
-  ]
+    [
+        'Kotlin',
+        'Java',
+        'Spring Boot',
+        'Spring Webflux',
+        'Elasticsearch',
+        'RabbitMQ',
+        'PostgreSQL',
+        'Kubernetes',
+        'Docker',
+        'Prometheus',
+        'Grafana',
+        'Kafka',
+    ]
 ---
 
 Ouest-France développe une plateforme pour l'hébergement des sites web du groupe SIPA dont le site principal est celui de Ouest-France.
 
 Cette nouvelle plateforme est constituée principalement de trois briques :
 
-- le CMS agnostique faisant l'orchestration des requêtes entrantes
-- les Block Providers fournissant des blocs de contenu à utiliser sur la plateforme, dont le principal étant le Block Provider Editorial, responsable de tous les contenus éditoriaux du groupe SIPA (articles, taxonomie et médias)
-- le Page-Builder utilisé pour configurer les blocs dans les pages des sites web
+-   le CMS agnostique faisant l'orchestration des requêtes entrantes
+-   les Block Providers fournissant des blocs de contenu à utiliser sur la plateforme, dont le principal étant le Block Provider Editorial, responsable de tous les contenus éditoriaux du groupe SIPA (articles, taxonomie et médias)
+-   le Page-Builder utilisé pour configurer les blocs dans les pages des sites web
 
 ### Mission et tâches principales :
 
-- Preuve de concept : Génération statique des contenus éditoriaux du groupe SIPA à afficher sur la plateforme
-  - Conception et développement d'un système réactif capable de construire toutes les vues matérialisées représentant les listes d'articles du site Ouest-France lors de la création / modification / suppression de contenus éditoriaux (Kafka, Kafka Streams, Java)
-- Développement du Block Provider Editorial
-  - Architecture micro-service, CQRS, vue matérialisée, dénormalisation de la données optimisée pour les lectures (Kotlin, Spring Boot, Webflux, Elasticsearch, RabbitMQ, JUnit)
-  - Configuration des déploiements Helm des applicatifs, Intégration continue, déploiement continu en environnement de qualification (Docker, Kubernetes, Helm, Gitlab CI/CD, Selenium)
-  - Monitoring des applicatifs en environnement de qualification et de production (Spring Boot Actuator, Micrometer, Spring Boot Admin, Prometheus, Grafana, EFK)
-  - Optimisation des temps de réponse et des consommations CPU / mémoire des applicatifs
+-   Preuve de concept : Génération statique des contenus éditoriaux du groupe SIPA à afficher sur la plateforme
+    -   Conception et développement d'un système réactif capable de construire toutes les vues matérialisées représentant les listes d'articles du site Ouest-France lors de la création / modification / suppression de contenus éditoriaux (Kafka, Kafka Streams, Java)
+-   Développement du Block Provider Editorial
+    -   Architecture micro-service, CQRS, vue matérialisée, dénormalisation de la données optimisée pour les lectures (Kotlin, Spring Boot, Webflux, Elasticsearch, RabbitMQ, JUnit)
+    -   Configuration des déploiements Helm des applicatifs, Intégration continue, déploiement continu en environnement de qualification (Docker, Kubernetes, Helm, Gitlab CI/CD, Selenium)
+    -   Monitoring des applicatifs en environnement de qualification et de production (Spring Boot Actuator, Micrometer, Spring Boot Admin, Prometheus, Grafana, EFK)
+    -   Optimisation des temps de réponse et des consommations CPU / mémoire des applicatifs

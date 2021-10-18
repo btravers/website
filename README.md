@@ -2,5 +2,5 @@
 
 Use one of the following links :
 
-- https://btravers.fr
-- https://benoit-travers.fr
+-   https://btravers.fr
+-   https://benoit-travers.fr
