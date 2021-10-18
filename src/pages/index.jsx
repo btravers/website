@@ -6,12 +6,12 @@ import IntroSection from "../components/IntroSection"
 import SkillsSection from "../components/SkillsSection"
 import WorkExperienceSection from "../components/WorkExperienceSection"
 import EducationSection from "../components/EducationSection"
-import ContactSection from "../components/ContactSection"
+import ContactFormSection from "../components/ContactFormSection"
 import Footer from "../components/Footer"
 
 import Page from "../components/pdf/Page"
 import Portrait from "../components/Portrait"
-import ContactPart from "../components/pdf/ContactPart"
+import ContactSection from "../components/ContactSection"
 import EducationPart from "../components/pdf/EducationPart"
 import WorkExperiencePart from "../components/pdf/WorkExperiencePart"
 
@@ -24,7 +24,7 @@ const IndexPage = () => (
             <SkillsSection/>
             <WorkExperienceSection/>
             <EducationSection/>
-            <ContactSection/>
+            <ContactFormSection/>
             <Footer/>
         </div>
         <div className="hidden print:block">
@@ -34,7 +34,7 @@ const IndexPage = () => (
                         <div className="my-16">
                             <Portrait/>
                         </div>
-                        <ContactPart/>
+                        <ContactSection/>
                         <EducationPart/>
                         <SkillsSection/>
                     </div>

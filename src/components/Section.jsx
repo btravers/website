@@ -31,7 +31,7 @@ const Section = ({title, dark, hideNextButton, children}) => {
         <div className={`min-h-screen flex flex-col items-center ${dark ? "dark" : ""} print:min-h-0`} ref={ref}>
             <div className="flex-grow w-full flex flex-col print:divide-y-2 print:divide-current print:w-full">
                 {title && <SectionTitle value={title.value} illustration={title.illustration}/>}
-                <div className="flex-grow flex w-full container mx-auto px-5 print:px-0 print:py-0">
+                <div className={`flex-grow flex w-full container mx-auto px-5 print:px-0 ${title ? "py-8" : ""}`}>
                     {children}
                 </div>
             </div>

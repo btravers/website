@@ -53,27 +53,22 @@ SkillSet.propTypes = {
     })).isRequired,
 }
 
-const Skills = () => {
+const SkillsSection = () => {
     const groupedSkills = useGroupedSkills()
     return (
-        <>
-            {
-                groupedSkills
-                    .map(({title, skills}) => (
-                        <SkillSet key={title} name={title} skills={skills}/>
-                    ))
-            }
-        </>
+        <Section title={{value: "compétences", illustration}}>
+            <div
+                className="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 print:grid-cols-2 print:gap-3"
+            >
+                {
+                    groupedSkills
+                        .map(({title, skills}) => (
+                            <SkillSet key={title} name={title} skills={skills}/>
+                        ))
+                }
+            </div>
+        </Section>
     )
 }
-
-const SkillsSection = () => (
-    <Section title={{value: "compétences", illustration}}>
-        <div
-            className="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 print:grid-cols-2 print:gap-3">
-            <Skills/>
-        </div>
-    </Section>
-)
 
 export default SkillsSection

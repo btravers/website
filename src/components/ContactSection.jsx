@@ -1,61 +1,41 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Section from "./Section";
+import LocationIcon from "./icons/LocationIcon"
+import AtIcon from "./icons/AtIcon"
+import GlobeIcon from "./icons/GlobeIcon"
+import PhoneIcon from "./icons/PhoneIcon"
+import Section from "./Section"
 
-import illustration from "../images/43.svg"
-
-const Input = ({label, type, name}) => (
-    <div className="max-w-5xl mx-auto flex flex-col w-full">
-        <label className="capitalize font-light" htmlFor={name}>{label}</label>
-        <input
-            className="rounded mt-2 mb-6 py-2 px-4 text-primary-800 focus:outline-none"
-            type={type}
-            name={name}
-            id={name}
-            required
-        />
+const ContactSubPart = ({icon, value}) => (
+    <div className="flex gap-2 items-center my-2">
+        <div className="flex-none">{icon}</div>
+        <div className="text-lg">{value}</div>
     </div>
 )
 
-Input.propTypes = {
-    label: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-}
-
-const TextArea = ({label, name}) => (
-    <div className="flex flex-col w-full">
-        <label className="capitalize font-light" htmlFor={name}>{label}</label>
-        <textarea
-            className="rounded mt-2 mb-6 py-2 px-4 h-56 text-primary-800 focus:outline-none"
-            name={name}
-            id={name}
-            required
-        />
-    </div>
-)
-
-TextArea.propTypes = {
-    label: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+ContactSubPart.propTypes = {
+    icon: PropTypes.node.isRequired,
+    value: PropTypes.string.isRequired,
 }
 
 const ContactSection = () => (
-    <Section title={{value: "Me contacter", illustration}} dark hideNextButton>
-        <form
-            className="max-w-4xl w-full mx-auto px-5 flex flex-col gap-5 items-center"
-            method="post"
-            action="https://getform.io/f/96ec8850-3156-47da-9b22-cd5eee9ddf7d"
-        >
-            <Input label="email" type="email" name="email"/>
-            <Input label="nom" type="text" name="name"/>
-            <TextArea label="message" type="text" name="message"/>
-            <div className="flex gap-3 justify-end w-full">
-                <button className="btn bg-secondary text-white" type="submit">Envoyer</button>
-                <input className="btn border border-white bg-primary-800 text-white" type="reset" value="Annuler"/>
-            </div>
-        </form>
+    <Section title={{value: "contact"}}>
+        <div>
+            <ContactSubPart
+                icon={<LocationIcon/>}
+                value={String.fromCharCode(50, 57, 32, 114, 117, 101, 32, 80, 46, 32, 86, 97, 114, 105, 110, 32, 100, 101, 32, 108, 97, 32, 66, 114, 117, 110, 101, 108, 105, 0x00E8, 114, 101, 44, 32, 82, 101, 110, 110, 101, 115, 32, 40, 70, 114, 97, 110, 99, 101, 41)}
+            />
+            <ContactSubPart
+                icon={<PhoneIcon/>}
+                value={String.fromCharCode(48, 55, 54, 48, 54, 48, 50, 49, 52, 52)}
+            />
+            <ContactSubPart
+                icon={<AtIcon/>}
+                value={String.fromCharCode(98, 116, 114, 97, 118, 101, 114, 115, 46, 112, 114, 111, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109)}
+            />
+            <ContactSubPart icon={<GlobeIcon/>} value="https://btravers.fr"/>
+        </div>
     </Section>
 )
 
