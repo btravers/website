@@ -8,15 +8,14 @@ import GitHub from "./icons/GitHub"
 import logo from "../images/logo-large-inverted.svg"
 import workingGuyIllustration from "../images/22.svg"
 
-const Hero = () => (
+const TitleSection = () => (
     <Section dark>
         <div className="max-w-6xl mx-auto w-full flex flex-col">
             <Header/>
             <div className="flex-grow mx-auto grid grid-cols-1 xl:grid-cols-2 items-center">
                 <div className="flex flex-col items-center justify-center">
                     <img className="mx-3 md:mx-5 lg:mx-10 xl:mx-0 mb-8 max-w-2xl" src={logo} alt=""/>
-                    <h2 className="text-xl md:text-3xl text-center my-2">développeur full stack freelance <br/> basé à
-                        Rennes, France</h2>
+                    <h2 className="text-xl md:text-3xl text-center my-2">développeur full stack freelance <br/> basé à Rennes, France</h2>
                     <div className="inline-grid grid-cols-2 my-6 gap-5">
                         <a href="https://www.linkedin.com/in/btraversfr/" target="_blank" rel="noopener noreferrer"
                            aria-label="linkedin">
@@ -34,4 +33,4 @@ const Hero = () => (
     </Section>
 )
 
-export default Hero
+export default TitleSection

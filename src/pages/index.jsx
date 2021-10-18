@@ -1,7 +1,7 @@
 import * as React from "react"
 
 import SEO from "../components/SEO"
-import Hero from "../components/Hero"
+import TitleSection from "../components/TitleSection"
 import IntroSection from "../components/IntroSection"
 import SkillsSection from "../components/SkillsSection"
 import ProfessionalExperiencesSection from "../components/ProfessionalExperiencesSection"
@@ -13,15 +13,15 @@ import Page from "../components/pdf/Page"
 import Portrait from "../components/Portrait"
 import ContactPart from "../components/pdf/ContactPart"
 import EducationPart from "../components/pdf/EducationPart"
+import TitlePart from "../components/pdf/TitlePart"
 import IntroPart from "../components/pdf/IntroPart"
 import WorkExperiencePart from "../components/pdf/WorkExperiencePart"
-import SkillsPart from "../components/pdf/SkillsPart"
 
 const IndexPage = () => (
     <main>
         <SEO/>
         <div className="bg-grey-50 text-primary-800 print:hidden">
-            <Hero/>
+            <TitleSection/>
             <IntroSection/>
             <SkillsSection/>
             <ProfessionalExperiencesSection/>
@@ -38,9 +38,10 @@ const IndexPage = () => (
                         </div>
                         <ContactPart/>
                         <EducationPart/>
-                        <SkillsPart/>
+                        <SkillsSection/>
                     </div>
-                    <div className="col-span-2 flex flex-col gap-16 text-primary-800 px-12">
+                    <div className="col-span-2 flex flex-col gap-16 text-primary-800 px-12 py-10">
+                        <TitlePart/>
                         <IntroPart/>
                         <WorkExperiencePart offset={0} size={3}/>
                     </div>

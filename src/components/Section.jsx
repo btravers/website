@@ -4,9 +4,9 @@ import PropTypes from "prop-types"
 import ArrowDownIcon from "./icons/ArrowDownIcon"
 
 const SectionTitle = ({value, illustration}) => (
-    <div className="w-full dark flex flex-col items-center py-8 mb-10">
-        <img className="mx-auto h-32 w-auto" src={illustration} alt=""/>
-        <h3 className="text-4xl capitalize">{value}</h3>
+    <div className="w-full dark flex flex-col items-center py-8 mb-10 print:items-start print:py-0 print:my-2">
+        <img className="mx-auto h-32 w-auto print:hidden" src={illustration} alt=""/>
+        <h3 className="text-4xl capitalize print:text-2xl print:uppercase">{value}</h3>
     </div>
 )
 
@@ -28,10 +28,10 @@ const Section = ({title, dark, hideNextButton, children}) => {
     }
 
     return (
-        <div className={`min-h-screen flex flex-col items-center ${dark ? "dark" : ""}`} ref={ref}>
-            <div className="flex-grow w-full flex flex-col">
-                { title && <SectionTitle value={title.value} illustration={title.illustration}/> }
-                <div className="flex-grow flex w-full container mx-auto px-5">
+        <div className={`min-h-screen flex flex-col items-center ${dark ? "dark" : ""} print:min-h-0`} ref={ref}>
+            <div className="flex-grow w-full flex flex-col print:divide-y-2 print:divide-current print:w-full">
+                {title && <SectionTitle value={title.value} illustration={title.illustration}/>}
+                <div className="flex-grow flex w-full container mx-auto px-5 print:px-0 print:py-8">
                     {children}
                 </div>
             </div>
@@ -39,13 +39,13 @@ const Section = ({title, dark, hideNextButton, children}) => {
                 hideNextButton ||
                 <button
                     type="button"
-                    className="cursor-pointer w-full flex justify-center"
+                    className="cursor-pointer w-full flex justify-center print:hidden"
                     onClick={jumpToNextSection}
                     aria-label="jump to next section"
                 >
-                <span className="animate-bounce pt-10">
-                    <ArrowDownIcon/>
-                </span>
+                    <span className="animate-bounce pt-10">
+                        <ArrowDownIcon/>
+                    </span>
                 </button>
             }
         </div>
