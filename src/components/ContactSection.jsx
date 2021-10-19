@@ -34,7 +34,7 @@ const ContactSection = () => (
                 icon={<AtIcon/>}
                 value={String.fromCharCode(98, 116, 114, 97, 118, 101, 114, 115, 46, 112, 114, 111, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109)}
             />
-            <ContactSubPart icon={<GlobeIcon/>} value="https://btravers.fr"/>
+            <ContactSubPart icon={<GlobeIcon/>} value="https://benoit-travers.fr"/>
         </div>
     </Section>
 )
