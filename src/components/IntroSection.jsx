@@ -15,7 +15,7 @@ const IntroSection = () => {
                 <div className="mx-auto print:hidden">
                     <Portrait/>
                 </div>
-                <div className="text-lg xl:col-span-2 xl:pl-8 print:text-base">
+                <div className="text-lg text-gray-600 xl:col-span-2 xl:pl-8 print:text-base">
                     <CustomizedMDXRenderer>
                         {intro.body}
                     </CustomizedMDXRenderer>

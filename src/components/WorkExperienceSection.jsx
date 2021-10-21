@@ -23,7 +23,7 @@ const Experience = ({organization, title, location, start, end, skills, body}) =
             </span>
             <Calendar start={start} end={end}/>
         </div>
-        <div>
+        <div className="text-gray-600">
             <CustomizedMDXRenderer>{body}</CustomizedMDXRenderer>
         </div>
         <div className="inline-flex flex-wrap gap-3 my-3">

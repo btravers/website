@@ -7,7 +7,7 @@ import {MDXRenderer} from "gatsby-plugin-mdx"
 const ul = props => <ul className="list-disc list-inside pl-8 print:pl-5" {...props} />
 const li = props => <li className="my-2 print:my-1" {...props} />
 const p = props => <p className="my-2 print:my-1" {...props} />
-const h3 = props => <h3 className="text-lg mt-3 mb-2 print:text-base print:mt-2 print:mb-1" {...props} />
+const h3 = props => <h3 className="mt-4 mb-2 print:mt-2 print:mb-1" {...props} />
 /* eslint-enable react/jsx-props-no-spreading, jsx-a11y/heading-has-content */
 
 const components = {ul, li, p, h3}
