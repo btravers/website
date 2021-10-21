@@ -33,7 +33,7 @@ const TitleSection = () => (
                         </a>
                     </div>
                 </div>
-                <img className="hidden xl:block print:hidden" src={workingGuyIllustration} alt=""/>
+                <img className="hidden xl:block print:hidden animate__animated animate__fadeInRight" src={workingGuyIllustration} alt=""/>
             </div>
         </div>
     </Section>

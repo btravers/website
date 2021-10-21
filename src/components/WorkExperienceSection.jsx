@@ -11,7 +11,7 @@ import CustomizedMDXRenderer from "./CustomizedMDXRenderer"
 import illustration from "../images/90.svg"
 
 const Experience = ({organization, title, location, start, end, skills, body}) => (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1 animate__animated animate__fadeInUp">
         <div className="flex flex-col gap-1 text-primary-800 print:flex-row">
             <div className="text-xl font-bold">{organization}</div>
             <span className="hidden print:block">/</span>

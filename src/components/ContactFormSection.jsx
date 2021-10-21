@@ -44,7 +44,7 @@ TextArea.propTypes = {
 const ContactFormSection = () => (
     <Section title={{value: "Me contacter", illustration}} dark hideNextButton>
         <form
-            className="max-w-4xl w-full mx-auto px-5 flex flex-col gap-5 items-center"
+            className="max-w-4xl w-full mx-auto px-5 flex flex-col gap-5 items-center animate__animated animate__fadeInRight"
             method="post"
             action="https://getform.io/f/96ec8850-3156-47da-9b22-cd5eee9ddf7d"
         >

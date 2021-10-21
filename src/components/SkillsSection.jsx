@@ -32,7 +32,7 @@ Skill.propTypes = {
 }
 
 const SkillSet = ({name, skills}) => (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1 animate__animated animate__fadeInUp">
         <h4 className="text-lg text-gray-500 print:text-base print:text-current print:font-bold print-slash-prefix">{name}</h4>
         <ul className="divide-y divide-gray-200 divide-solid print:divide-none">
             {

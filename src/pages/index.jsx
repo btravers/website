@@ -12,10 +12,12 @@ import Page from "../components/Page"
 import Portrait from "../components/Portrait"
 import ContactSection from "../components/ContactSection"
 
+import 'animate.css';
+
 const IndexPage = () => (
     <main>
         <SEO/>
-        <div className="bg-grey-50 text-primary-800 print:hidden">
+        <div className="bg-grey-50 text-primary-800 print:hidden overflow-x-hidden">
             <TitleSection/>
             <IntroSection/>
             <SkillsSection/>
