@@ -27,10 +27,11 @@ const Skill = ({name, mark}) => (
     </li>
 )
 
-Skill.propTypes = {
+const skillPropTypes = {
     name: PropTypes.string.isRequired,
     mark: PropTypes.oneOf([1, 2, 3]).isRequired,
 }
+Skill.propTypes = skillPropTypes
 
 const SkillSet = ({name, skills}) => (
     <Animated animation="fadeInUp">
@@ -50,10 +51,7 @@ const SkillSet = ({name, skills}) => (
 
 SkillSet.propTypes = {
     name: PropTypes.string.isRequired,
-    skills: PropTypes.arrayOf(PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        mark: PropTypes.oneOf([1, 2, 3]).isRequired,
-    })).isRequired,
+    skills: PropTypes.arrayOf(PropTypes.shape(skillPropTypes)).isRequired,
 }
 
 const SkillsSection = () => {

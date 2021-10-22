@@ -1,4 +1,4 @@
-import React, {useRef, useState, useEffect} from "react"
+import React, {useEffect, useRef, useState} from "react"
 import PropTypes from "prop-types"
 import Animated from "./Animated"
 
@@ -6,7 +6,7 @@ import ArrowDownIcon from "./icons/ArrowDownIcon"
 
 const SectionTitle = ({value, illustration}) => (
     <Animated animation="fadeIn">
-        <div className="w-full dark  py-8 mb-10 print:py-0 print:my-2">
+        <div className="w-full dark py-8 mb-10 print:py-0 print:my-2">
             <div className="flex flex-col items-center print:items-start">
                 {illustration && <img className="mx-auto h-32 w-auto print:hidden" src={illustration} alt=""/>}
                 <h3 className="text-4xl capitalize print:text-2xl print:uppercase">{value}</h3>
@@ -19,9 +19,27 @@ SectionTitle.defaultProps = {
     illustration: null,
 }
 
-SectionTitle.propTypes = {
+const tilePropTypes = {
     value: PropTypes.string.isRequired,
     illustration: PropTypes.string,
+}
+SectionTitle.propTypes = tilePropTypes
+
+const NextSectionButton = ({onClick}) => (
+    <button
+        type="button"
+        className="cursor-pointer w-full flex justify-center print:hidden"
+        onClick={onClick}
+        aria-label="jump to next section"
+    >
+                    <span className="animate-bounce pt-10">
+                        <ArrowDownIcon/>
+                    </span>
+    </button>
+)
+
+NextSectionButton.propTypes = {
+    onClick: PropTypes.func.isRequired,
 }
 
 const Section = ({title, dark, hideNextButton, children}) => {
@@ -33,7 +51,10 @@ const Section = ({title, dark, hideNextButton, children}) => {
 
     const jumpToNextSection = event => {
         event.preventDefault()
-        anchorTarget.scrollIntoView({behavior: "smooth", block: "start"})
+        anchorTarget.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        })
     }
 
     return (
@@ -45,17 +66,7 @@ const Section = ({title, dark, hideNextButton, children}) => {
                 </div>
             </div>
             {
-                hideNextButton ||
-                <button
-                    type="button"
-                    className="cursor-pointer w-full flex justify-center print:hidden"
-                    onClick={jumpToNextSection}
-                    aria-label="jump to next section"
-                >
-                    <span className="animate-bounce pt-10">
-                        <ArrowDownIcon/>
-                    </span>
-                </button>
+                hideNextButton || <NextSectionButton onClick={jumpToNextSection}/>
             }
         </div>
     )
@@ -68,10 +79,7 @@ Section.defaultProps = {
 }
 
 Section.propTypes = {
-    title: PropTypes.shape({
-        value: PropTypes.string.isRequired,
-        illustration: PropTypes.string,
-    }),
+    title: PropTypes.shape(tilePropTypes),
     dark: PropTypes.bool,
     hideNextButton: PropTypes.bool,
     children: PropTypes.oneOfType([
