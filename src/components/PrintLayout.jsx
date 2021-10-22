@@ -14,14 +14,14 @@ const PrintLayout = () => (
         <Page first>
             <div className="grid grid-cols-3 items-stretch h-full">
                 <div className="flex flex-col gap-3 pl-16 dark-print">
-                    <div className="my-16">
+                    <div className="my-10">
                         <Portrait/>
                     </div>
                     <ContactSection/>
                     <EducationSection/>
                     <SkillsSection/>
                 </div>
-                <div className="col-span-2 flex flex-col gap-8 text-primary-800 px-12 py-10">
+                <div className="col-span-2 flex flex-col gap-8 text-primary-800 px-12 py-8">
                     <TitleSection/>
                     <IntroSection/>
                     <WorkExperienceSection offset={0} size={3}/>

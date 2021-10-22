@@ -35,8 +35,4 @@
         content: '//';
         margin-right: 0.25rem;
     }
-
-    .animate__animated {
-        animation: none !important;
-    }
 }

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import {useInView} from "react-intersection-observer"
 
-import "animate.css"
+import "./Animated.css"
 
 const Animated = ({animation, children}) => {
     const {ref, inView} = useInView({
@@ -11,7 +11,7 @@ const Animated = ({animation, children}) => {
     })
     return (
         <div ref={ref} className="w-full">
-            <div className={`animate__animated ${inView ? `animate__${animation} block` : "hidden"} print:block`}>
+            <div className={`animated ${inView ? `${animation} block` : "hidden"} print:block`}>
                 {children}
             </div>
         </div>
@@ -19,7 +19,7 @@ const Animated = ({animation, children}) => {
 }
 
 Animated.propTypes = {
-    animation: PropTypes.string.isRequired,
+    animation: PropTypes.oneOf(["fadeIn", "fadeInRight", "fadeInLeft", "fadeInUp"]).isRequired,
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node
