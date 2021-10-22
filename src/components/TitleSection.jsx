@@ -4,10 +4,10 @@ import Section from "./Section"
 import Header from "./Header"
 import LinkedIn from "./icons/LinkedIn"
 import GitHub from "./icons/GitHub"
+import Animated from "./Animated"
 
 import logo from "../images/logo-large-inverted.svg"
 import workingGuyIllustration from "../images/22.svg"
-import Animated from "./Animated";
 
 const TitleSection = () => (
     <Section dark>
