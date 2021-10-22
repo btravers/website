@@ -54,7 +54,7 @@ const ContactFormSection = () => (
                 <Input label="nom" type="text" name="name"/>
                 <TextArea label="message" type="text" name="message"/>
                 <div className="flex gap-3 justify-end w-full">
-                    <button className="btn bg-secondary text-white" type="submit">Envoyer</button>
+                    <button className="btn bg-secondary-800 text-white" type="submit">Envoyer</button>
                     <input className="btn border border-white bg-primary-800 text-white" type="reset" value="Annuler"/>
                 </div>
             </form>
