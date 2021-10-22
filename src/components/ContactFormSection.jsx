@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Section from "./Section";
+import Animated from "./Animated"
 
 import illustration from "../images/43.svg"
 
@@ -43,19 +44,21 @@ TextArea.propTypes = {
 
 const ContactFormSection = () => (
     <Section title={{value: "Me contacter", illustration}} dark hideNextButton>
-        <form
-            className="max-w-4xl w-full mx-auto px-5 flex flex-col gap-5 items-center animate__animated animate__fadeInRight"
-            method="post"
-            action="https://getform.io/f/96ec8850-3156-47da-9b22-cd5eee9ddf7d"
-        >
-            <Input label="email" type="email" name="email"/>
-            <Input label="nom" type="text" name="name"/>
-            <TextArea label="message" type="text" name="message"/>
-            <div className="flex gap-3 justify-end w-full">
-                <button className="btn bg-secondary text-white" type="submit">Envoyer</button>
-                <input className="btn border border-white bg-primary-800 text-white" type="reset" value="Annuler"/>
-            </div>
-        </form>
+        <Animated animation="fadeInRight">
+            <form
+                className="max-w-4xl w-full mx-auto px-5 flex flex-col gap-5 items-center"
+                method="post"
+                action="https://getform.io/f/96ec8850-3156-47da-9b22-cd5eee9ddf7d"
+            >
+                <Input label="email" type="email" name="email"/>
+                <Input label="nom" type="text" name="name"/>
+                <TextArea label="message" type="text" name="message"/>
+                <div className="flex gap-3 justify-end w-full">
+                    <button className="btn bg-secondary text-white" type="submit">Envoyer</button>
+                    <input className="btn border border-white bg-primary-800 text-white" type="reset" value="Annuler"/>
+                </div>
+            </form>
+        </Animated>
     </Section>
 )
 

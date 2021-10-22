@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 import Section from "./Section"
 import useGroupedSkills from "./hooks/useGroupedSkills"
+import Animated from "./Animated"
 
 import illustration from "../images/93.svg"
 
@@ -32,17 +33,19 @@ Skill.propTypes = {
 }
 
 const SkillSet = ({name, skills}) => (
-    <div className="flex flex-col gap-1 animate__animated animate__fadeInUp">
-        <h4 className="text-lg text-gray-500 print:text-base print:text-current print:font-bold print-slash-prefix">{name}</h4>
-        <ul className="divide-y divide-gray-200 divide-solid print:divide-none">
-            {
-                skills
-                    .map(({name: skill, mark}) => (
-                        <Skill key={skill} name={skill} mark={mark}/>
-                    ))
-            }
-        </ul>
-    </div>
+    <Animated animation="fadeInUp">
+        <div className="flex flex-col gap-1">
+            <h4 className="text-lg text-gray-500 print:text-base print:text-current print:font-bold print-slash-prefix">{name}</h4>
+            <ul className="divide-y divide-gray-200 divide-solid print:divide-none">
+                {
+                    skills
+                        .map(({name: skill, mark}) => (
+                            <Skill key={skill} name={skill} mark={mark}/>
+                        ))
+                }
+            </ul>
+        </div>
+    </Animated>
 )
 
 SkillSet.propTypes = {

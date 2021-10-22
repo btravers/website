@@ -12,8 +12,6 @@ import Page from "../components/Page"
 import Portrait from "../components/Portrait"
 import ContactSection from "../components/ContactSection"
 
-import 'animate.css';
-
 const IndexPage = () => (
     <main>
         <SEO/>
