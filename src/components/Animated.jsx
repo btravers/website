@@ -10,8 +10,10 @@ const Animated = ({animation, children}) => {
         triggerOnce: true,
     })
     return (
-        <div ref={ref} className={`w-full animate__animated ${inView ? `animate__${animation}` : ""}`}>
-            {children}
+        <div ref={ref} className="w-full">
+            <div className={`animate__animated ${inView ? `animate__${animation} block` : "hidden"} print:block`}>
+                {children}
+            </div>
         </div>
     )
 }
