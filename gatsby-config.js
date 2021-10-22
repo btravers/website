@@ -11,8 +11,6 @@ module.exports = {
         "gatsby-plugin-gatsby-cloud",
 
         "gatsby-plugin-react-helmet",
-        "gatsby-plugin-sitemap",
-        "gatsby-plugin-robots-txt",
         {
             resolve: "gatsby-plugin-manifest",
             options: {
@@ -66,27 +64,5 @@ module.exports = {
             }
         },
 
-        {
-            resolve: "gatsby-plugin-prettier-eslint",
-            options: {
-                prettier: {
-                    patterns: [
-                        "**/*.{css,scss,less}",
-                        "**/*.{json,json5}",
-                        "**/*.{graphql}",
-                        "**/*.{md,mdx}",
-                        "**/*.{html}",
-                        "**/*.{yaml,yml}",
-                    ],
-                },
-                eslint: {
-                    patterns: "**/*.{js,jsx,ts,tsx}",
-                    customOptions: {
-                        fix: true,
-                        cache: true,
-                    },
-                },
-            },
-        },
     ],
 };

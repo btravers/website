@@ -1,18 +1,18 @@
 import React, {useRef, useState, useEffect} from "react"
 import PropTypes from "prop-types"
+import Animated from "./Animated"
 
 import ArrowDownIcon from "./icons/ArrowDownIcon"
-import Animated from "./Animated";
 
 const SectionTitle = ({value, illustration}) => (
-    <div className="w-full dark  py-8 mb-10 print:py-0 print:my-2">
-        <Animated animation="fadeIn">
+    <Animated animation="fadeIn">
+        <div className="w-full dark  py-8 mb-10 print:py-0 print:my-2">
             <div className="flex flex-col items-center print:items-start">
                 {illustration && <img className="mx-auto h-32 w-auto print:hidden" src={illustration} alt=""/>}
                 <h3 className="text-4xl capitalize print:text-2xl print:uppercase">{value}</h3>
             </div>
-        </Animated>
-    </div>
+        </div>
+    </Animated>
 )
 
 SectionTitle.defaultProps = {
