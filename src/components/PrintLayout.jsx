@@ -21,7 +21,7 @@ const PrintLayout = () => (
                     <EducationSection/>
                     <SkillsSection/>
                 </div>
-                <div className="col-span-2 flex flex-col gap-8 text-primary-800 px-12 py-8">
+                <div className="col-span-2 flex flex-col gap-4 text-primary-800 px-12 py-8">
                     <TitleSection/>
                     <IntroSection/>
                     <WorkExperienceSection offset={0} size={3}/>
