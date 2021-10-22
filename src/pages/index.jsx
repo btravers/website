@@ -27,7 +27,7 @@ const IndexPage = () => (
         <div className="hidden print:block">
             <Page first>
                 <div className="grid grid-cols-3 items-stretch h-full">
-                    <div className="flex flex-col gap-6 pl-16 dark-print">
+                    <div className="flex flex-col gap-3 pl-16 dark-print">
                         <div className="my-16">
                             <Portrait/>
                         </div>

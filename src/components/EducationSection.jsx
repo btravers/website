@@ -36,7 +36,7 @@ const EducationSection = () => {
     const nodes = useEducation()
     return (
         <Section title={{value: "études", illustration}}>
-            <div className="max-w-5xl mx-auto w-full">
+            <div className="max-w-5xl mx-auto w-full flex flex-col gap-12 print:gap-5">
                 {
                     nodes.map(({frontmatter: {title, organization, start, end, location}, id}) => (
                         <Experience
