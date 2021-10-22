@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import {useInView} from "react-intersection-observer"
 
-import "./Animated.css"
+import * as styles from "./Animated.module.css"
 
 const Animated = ({animation, children}) => {
     const {ref, inView} = useInView({
@@ -11,7 +11,7 @@ const Animated = ({animation, children}) => {
     })
     return (
         <div ref={ref} className="w-full">
-            <div className={`animated ${inView ? `${animation} block` : "hidden"} print:block`}>
+            <div className={`${styles.animated} ${inView ? `${styles[animation]} block` : "hidden"} print:block`}>
                 {children}
             </div>
         </div>
