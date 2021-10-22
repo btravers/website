@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.label {
+    @apply capitalize font-light;
+}
+
+.input {
+    @apply rounded mt-2 mb-6 py-2 px-4 text-primary-800 focus:outline-none shadow;
+}
+
 .btn {
-    @apply cursor-pointer text-lg px-5 py-2 rounded;
+    @apply cursor-pointer text-lg px-5 py-2 rounded shadow-lg hover:shadow-2xl;
 }
 
 .dark {

@@ -17,7 +17,7 @@ const TitleSection = () => (
                 <div>
                     <Animated animation="fadeIn">
                         <div className="flex flex-col items-center justify-center print:items-start">
-                            <img className="mx-3 md:mx-5 lg:mx-10 xl:mx-0 mb-8 max-w-2xl print:hidden" src={logo} alt=""/>
+                            <img className="mb-8 print:hidden" src={logo} alt=""/>
                             <h1 className="text-6xl uppercase hidden print:block">
                                 <span className="font-bold">Benoit</span> Travers
                             </h1>

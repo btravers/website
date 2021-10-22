@@ -33,7 +33,7 @@ const Experience = ({organization, title, location, start, end, skills, body}) =
                     skills.map(skill => (
                         <div
                             key={skill}
-                            className="bg-primary-200 text-primary-800 px-2 py-1 rounded"
+                            className="bg-primary-200 text-primary-800 px-2 py-1 rounded shadow"
                         >
                             {skill}
                         </div>

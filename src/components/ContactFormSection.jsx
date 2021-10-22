@@ -8,9 +8,9 @@ import illustration from "../images/43.svg"
 
 const Input = ({label, type, name}) => (
     <div className="max-w-5xl mx-auto flex flex-col w-full">
-        <label className="capitalize font-light" htmlFor={name}>{label}</label>
+        <label className="label" htmlFor={name}>{label}</label>
         <input
-            className="rounded mt-2 mb-6 py-2 px-4 text-primary-800 focus:outline-none"
+            className="input"
             type={type}
             name={name}
             id={name}
@@ -27,9 +27,9 @@ Input.propTypes = {
 
 const TextArea = ({label, name}) => (
     <div className="flex flex-col w-full">
-        <label className="capitalize font-light" htmlFor={name}>{label}</label>
+        <label className="label" htmlFor={name}>{label}</label>
         <textarea
-            className="rounded mt-2 mb-6 py-2 px-4 h-56 text-primary-800 focus:outline-none"
+            className="input h-56"
             name={name}
             id={name}
             required
