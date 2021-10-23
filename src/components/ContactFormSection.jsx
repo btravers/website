@@ -54,8 +54,8 @@ const ContactFormSection = () => (
                 <Input label="nom" type="text" name="name"/>
                 <TextArea label="message" type="text" name="message"/>
                 <div className="flex gap-3 justify-end w-full">
-                    <button className="btn bg-secondary-800 text-white" type="submit">Envoyer</button>
-                    <input className="btn border border-white bg-primary-800 text-white" type="reset" value="Annuler"/>
+                    <button className="btn bg-color-2-800 text-white hover:bg-color-2-900" type="submit">Envoyer</button>
+                    <input className="btn border border-white bg-color-1-800 text-white hover:bg-color-1-900" type="reset" value="Annuler"/>
                 </div>
             </form>
         </Animated>

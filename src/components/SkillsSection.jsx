@@ -8,7 +8,7 @@ import Animated from "./Animated"
 import illustration from "../images/93.svg"
 
 const SkillLevel = ({level, selected}) => (
-    <div className={`h-1 w-10 rounded-sm ${selected ? "bg-primary-400" : "bg-primary-200"}`} title={level}/>
+    <div className={`h-1 w-10 rounded-sm shadow ${selected ? "bg-color-1-400" : "bg-color-1-200"}`} title={level}/>
 )
 
 SkillLevel.propTypes = {
@@ -18,7 +18,7 @@ SkillLevel.propTypes = {
 
 const Skill = ({name, mark}) => (
     <li className="grid grid-cols-2 py-2 print:block print:py-0">
-        <div className="text-lg text-primary-800 print:text-base print:text-current">{name}</div>
+        <div className="text-lg text-color-1-800 print:text-base print:text-current">{name}</div>
         <div className="grid grid-cols-3 gap-1 items-center justify-self-end print:hidden">
             <SkillLevel level="Débutant" selected={mark > 0}/>
             <SkillLevel level="Intermédiaire" selected={mark > 1}/>

@@ -12,11 +12,11 @@
           fill="#E1E4E5"/>
     <rect x="216.399" y="166.091" width="18.648" height="18.648" rx="9.324" fill="#fff" stroke="#E1E4E5"
           stroke-width="4"/>
-    <circle r="11.833" transform="matrix(1 0 0 -1 186.698 399.545)" fill="#EF233C"/>
-    <circle r="16.569" transform="scale(-1 1) rotate(30 -842.37 -1310.527)" fill="#EF233C"/>
+    <circle r="11.833" transform="matrix(1 0 0 -1 186.698 399.545)" fill="#D90429"/>
+    <circle r="16.569" transform="scale(-1 1) rotate(30 -842.37 -1310.527)" fill="#D90429"/>
     <circle r="12.349" transform="matrix(-1 0 0 1 466.813 177.572)" fill="#E1E4E5"/>
-    <circle cx="319.16" cy="131.833" r="16.435" fill="#EF233C"/>
-    <circle cx="554.114" cy="443.789" transform="rotate(180 554.114 443.789)" fill="#EF233C" r="13.589"/>
+    <circle cx="319.16" cy="131.833" r="16.435" fill="#D90429"/>
+    <circle cx="554.114" cy="443.789" transform="rotate(180 554.114 443.789)" fill="#D90429" r="13.589"/>
     <circle r="12.49" transform="matrix(-1 0 0 1 302.76 469.868)" fill="#E1E4E5"/>
     <circle r="9.36" transform="scale(1 -1) rotate(-30 -593.95 -1005.323)" fill="#E1E4E5"/>
     <rect x="718.31" y="181.625" width="27.252" height="3.175" rx="1.588" transform="rotate(-45 718.31 181.625)"
@@ -40,7 +40,7 @@
           fill="#E1E4E5"/>
     <path fill-rule="evenodd" clip-rule="evenodd"
           d="M180.882 325.922c-24.64 0-44.617-20.259-44.617-45.246 0-24.987 19.977-45.245 44.617-45.245 24.64 0 44.617 20.258 44.617 45.245s-19.977 45.246-44.617 45.246z"
-          fill="#EF233C"/>
+          fill="#D90429"/>
     <path d="m198.857 261.476-18.848 20.109-11.316-12.064" stroke="#fff" stroke-width="7.405" stroke-linecap="round"
           stroke-linejoin="round"/>
     <path d="m161.178 300.835 18.848-20.109 11.316 12.064" stroke="#fff" stroke-width="7.405" stroke-linecap="round"

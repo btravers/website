@@ -9,7 +9,7 @@ import ContactFormSection from "./ContactFormSection"
 import Footer from "./Footer"
 
 const WebLayout = () => (
-    <div className="bg-grey-50 text-primary-800 overflow-x-hidden print:hidden">
+    <div className="bg-grey-50 text-color-1-800 overflow-x-hidden print:hidden">
         <TitleSection/>
         <IntroSection/>
         <SkillsSection/>

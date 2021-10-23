@@ -12,8 +12,8 @@ import illustration from "../images/94.svg"
 const Experience = ({organization, title, location, start, end}) => (
     <Animated animation="fadeInUp">
         <div className="flex flex-col gap-1">
-            <div className="text-xl text-primary-800 font-bold print:text-base print:text-current">{organization}</div>
-            <div className="text-lg text-primary-800 print:text-base print:text-current">{title}</div>
+            <div className="text-xl text-color-1-800 font-bold print:text-base print:text-current">{organization}</div>
+            <div className="text-lg text-color-1-800 print:text-base print:text-current">{title}</div>
             <div className="inline-flex gap-4 md:gap-10 text-gray-500 print:flex print:flex-col print:gap-0 print:text-current">
                 <span className="print:hidden">
                     <Location value={location}/>

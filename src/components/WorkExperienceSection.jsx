@@ -14,7 +14,7 @@ import illustration from "../images/90.svg"
 const Experience = ({organization, title, location, start, end, skills, body}) => (
     <Animated animation="fadeInUp">
         <div className="flex flex-col gap-1">
-            <div className="flex flex-col gap-1 text-primary-800 print:flex-row">
+            <div className="flex flex-col gap-1 text-color-1-800 print:flex-row">
                 <div className="text-xl font-bold">{organization}</div>
                 <span className="hidden print:block">/</span>
                 <div className="text-lg">{title}</div>
@@ -33,7 +33,7 @@ const Experience = ({organization, title, location, start, end, skills, body}) =
                     skills.map(skill => (
                         <div
                             key={skill}
-                            className="bg-primary-200 text-primary-800 px-2 py-1 rounded shadow"
+                            className="bg-color-1-200 text-color-1-800 px-2 py-1 rounded shadow"
                         >
                             {skill}
                         </div>
