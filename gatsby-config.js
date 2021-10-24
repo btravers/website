@@ -22,6 +22,7 @@ module.exports = {
                 theme_color: "#2B2D42",
                 lang: "fr",
                 display: "standalone",
+                legacy: true,
             },
         },
         "gatsby-plugin-offline",
